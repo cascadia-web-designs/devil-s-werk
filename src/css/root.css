@@ -19,28 +19,28 @@
   }
   /* roboto-regular - latin */
   @font-face {
-    font-family: 'Roboto';
+    font-family: 'Albert Sans';
     font-style: normal;
     font-weight: 400;
-    src: local(''), url('/assets/fonts/roboto-v29-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/roboto-v29-latin-regular.woff') format('woff');
+    src: local(''), url('/src/assets/fonts/static/AlbertSans-Medium.ttf') format('ttf'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/roboto-v29-latin-regular.woff') format('woff');
     
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
   /* roboto-700 - latin */
   @font-face {
-    font-family: 'Roboto';
+    font-family: 'Albert Sans';
     font-style: normal;
     font-weight: 700;
-    src: local(''), url('/assets/fonts/roboto-v29-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/roboto-v29-latin-700.woff') format('woff');
+    src: local(''), url('/src/assets/fonts/static/AlbertSans-SemiBold.ttf') format('ttf'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/roboto-v29-latin-700.woff') format('woff');
     
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
   /* roboto-900 - latin */
   @font-face {
-    font-family: 'Roboto';
+    font-family: 'Albert Sans';
     font-style: normal;
     font-weight: 900;
-    src: local(''), url('/assets/fonts/roboto-v29-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/roboto-v29-latin-900.woff') format('woff');
+    src: local(''), url('/src/assets/fonts/static/AlbertSans-Black.ttf') format('ttf'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/roboto-v29-latin-900.woff') format('woff');
     
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
@@ -49,7 +49,7 @@
     margin: 0;
     padding: 0;
     font-size: 100%;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Albert Sans', Arial, sans-serif;
     color: var(--bodyTextColor);
     overflow-x: hidden;
   }
@@ -95,7 +95,6 @@
   .button-solid {
     font-size: 1rem;
     font-weight: bold;
-    text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
     width: auto;
@@ -307,7 +306,6 @@
   }
   #navigation #navbar-menu ul li a {
     text-decoration: none;
-    text-transform: uppercase;
     color: #000;
     font-size: 1.1875rem;
     text-align: center;
@@ -398,7 +396,7 @@
   #navigation .container {
     max-width: 75rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
   }
   #navigation .logo {
@@ -413,12 +411,12 @@
   #navigation #navbar-menu ul {
     padding: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    gap: 10rem;
   }
   #navigation #navbar-menu ul li {
     list-style: none;
-    margin-left: 1.875rem;
     padding-top: 0.1875rem;
   }
   #navigation #navbar-menu ul li a {
@@ -426,7 +424,6 @@
     font-weight: bold;
     /* 14px - 18px */
     font-size: clamp(0.875rem, 1.5vw, 1.125rem);
-    text-transform: uppercase;
     position: relative;
     z-index: 1;
     color: #fff;
@@ -696,7 +693,6 @@
     font-size: 1.125rem;
     line-height: 1.16666667em;
     margin-bottom: 2.3125rem;
-    text-transform: uppercase;
     font-weight: bold;
     position: relative;
   }
