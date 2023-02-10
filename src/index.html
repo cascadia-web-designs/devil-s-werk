@@ -7,7 +7,7 @@ preloadImg: '/images/landing-1920w.webp'
 preloadCSS: '/css/local.css'
 permalink: '/'
 eleventyNavigation:
-  key: Home
+  key: Logo
   order: 3
 ---
 <!-- Enter html code below -->
@@ -19,30 +19,20 @@ eleventyNavigation:
 <section id="hero">
   <div class="cs-container">
     <div class="cs-flex-group">
-      <span class="cs-topper">mountain hiking society</span>
-      <h1 class="cs-title">Explore the World with Exciting People</h1>
+      <h1 class="cs-title">
+        Welcome To 
+        <br>
+        Devil's Werk
+      </h1>
       <p class="cs-text">
-        Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin nibh
-        condimentum.
+        Wheels made with the devil's touch
       </p>
-      <a href="" class="cs-button-solid">Explore More</a>
-      <a href="" class="cs-button-transparent">
-        <img
-          class="cs-img"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-          alt="play icon"
-          width="17"
-          height="17"
-/>
-        Learn More
-      </a>
+      <a href="/inventory" class="cs-button-solid">Our Inventory</a>
     </div>
   </div>
 
   <!-- Background Image -->
-  {% image './src/images/landing.jpg', 'mountains', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+  {% image './src/images/cleantires.png', 'tires', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
 </section>
 
 <!-- ============================================ -->
@@ -56,13 +46,13 @@ eleventyNavigation:
       <img
         aria-hidden="true"
         decoding="async"
-        src="/assets/svgs/service1.svg"
+        src="/assets/svgs/wheel.svg"
         alt="appliance"
         width="48"
         height="48"
 />
     </picture>
-    <h2>Service 1</h2>
+    <h2>Wheel Resizing</h2>
     <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
   </div>
   <div class="card">
@@ -70,13 +60,13 @@ eleventyNavigation:
       <img
         aria-hidden="true"
         decoding="async"
-        src="/assets/svgs/service2.svg"
+        src="/assets/svgs/tire.svg"
         alt="appliance"
         width="48"
         height="48"
 />
     </picture>
-    <h2>Service 2</h2>
+    <h2>Repair Work</h2>
     <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
   </div>
   <div class="card">
@@ -84,13 +74,27 @@ eleventyNavigation:
       <img
         aria-hidden="true"
         decoding="async"
-        src="/assets/svgs/service3.svg"
+        src="/assets/svgs/drill.svg"
         alt="appliance"
         width="48"
         height="48"
 />
     </picture>
-    <h2>Service 3</h2>
+    <h2>Machine Work</h2>
+    <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
+  </div>  
+  <div class="card">
+    <picture>
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/svgs/polisher.svg"
+        alt="appliance"
+        width="48"
+        height="48"
+/>
+    </picture>
+    <h2>Refinishing</h2>
     <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
   </div>
 </section>
@@ -210,88 +214,6 @@ eleventyNavigation:
   </div>
 </section>
 
-<!-- ============================================ -->
-<!--                   Reviews                    -->
-<!-- ============================================ -->
-
-<section id="reviews">
-  <div class="cs-container">
-    <span class="cs-topper">Our Reviews</span>
-    <h2 class="cs-title">Words From Our Customers</h2>
-    <p class="cs-text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis
-      sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum
-      dolor sit amet.
-    </p>
-    <ul class="cs-card-group">
-      <!-- Review 1 -->
-      <li class="cs-item">
-        <img
-          class="cs-item-img"
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
-          alt="profile picture"
-          width="80"
-          height="80"
-/>
-        <p class="cs-item-p">
-          Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna
-          pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa
-          urna, volutpat orci imperdiet eget eget.
-        </p>
-        <span class="cs-reviewer">
-          Jon Doe
-          <span class="cs-desc">Homeowner</span>
-        </span>
-        <img
-          class="cs-item-stars"
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-          alt="stars"
-          width="96"
-          height="16"
-/>
-      </li>
-      <!-- Review 2 -->
-      <li class="cs-item">
-        <img
-          class="cs-item-img"
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
-          alt="profile picture"
-          width="80"
-          height="80"
-/>
-        <p class="cs-item-p">
-          Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna
-          pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa
-          urna, volutpat orci imperdiet eget eget.
-        </p>
-        <span class="cs-reviewer">
-          Jane Doe
-          <span class="cs-desc">Homeowner</span>
-        </span>
-        <img
-          class="cs-item-stars"
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-          alt="stars"
-          width="96"
-          height="16"
-/>
-      </li>
-    </ul>
-    <a aria-label="read more reviews" href="/reviews" class="button-solid">Read More</a>
-  </div>
-</section>
 <!-- ============================================ -->
 <!--             Final Call to Action             -->
 <!-- ============================================ -->
