@@ -5,6 +5,7 @@
 @media only screen and (min-width: 0em) {
   #sbs {
     padding: var(--sectionPadding);
+    margin-top: 60px;
   }
   #sbs .cs-container {
     width: 100%;
@@ -397,7 +398,7 @@
     display: block;
   }
   #gallery .cs-title {
-    font-size: var(--headerFontSize);
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
     font-weight: 700;
     line-height: 1.2em;
     text-align: center;
@@ -688,7 +689,6 @@
 @media only screen and (min-width: 1300px) {
   #cta {
     position: relative;
-    margin-top: 6.25rem;
   }
   #cta:before {
     display: none;
@@ -714,7 +714,7 @@
     margin: auto;
   }
   #cta picture {
-    width: 90.0625%;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
   }

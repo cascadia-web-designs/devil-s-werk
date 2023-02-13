@@ -22,7 +22,7 @@ eleventyNavigation:
       <h1 class="cs-title">
         Welcome To 
         <br>
-        Devil's Werk
+        Devil's <span class="text-red">Werk</span>
       </h1>
       <p class="cs-text">
         Wheels made with the devil's touch
@@ -52,7 +52,8 @@ eleventyNavigation:
 />
     </picture>
     <h2>Wheel Resizing</h2>
-    <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
+    <p>• Step Lip Conversion</p>
+    <p>• Up/Down Size Width</p>
   </div>
   <div class="card">
     <picture>
@@ -66,7 +67,12 @@ eleventyNavigation:
 />
     </picture>
     <h2>Repair Work</h2>
-    <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
+    <p>• Repairing Curb Rashes</p>
+    <p>• Unbending Lips/Barrels</p>
+    <p>• Replacing Lips/Barrels</p>
+    <p>• Resleaing Bad Silicone</p>
+    <p>• Cracked Barrels</p>
+    <p>• Welding</p>
   </div>
   <div class="card">
     <picture>
@@ -80,7 +86,10 @@ eleventyNavigation:
 />
     </picture>
     <h2>Machine Work</h2>
-    <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
+    <p>• Redrilling</p>
+    <p>• Backpad shaving</p>
+    <p>• Weld splitting</p>
+    <p>• Center bore enlargement</p>
   </div>  
   <div class="card">
     <picture>
@@ -94,7 +103,10 @@ eleventyNavigation:
 />
     </picture>
     <h2>Refinishing</h2>
-    <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
+    <p>• Standard or candy powder coating</p>
+    <p>• High polishing</p>
+    <p>• Hand brushinng</p>
+    <p>• Plating</p>
   </div>
 </section>
 
@@ -106,41 +118,23 @@ eleventyNavigation:
   <div class="cs-container">
     <!-- Left Image Section -->
     <div class="cs-left">
-      {% image './src/images/cabinets2.jpg', 'house', 'cs-picture cs-picture1', 'lazy'%}
-      {% image './src/images/construction.jpg', 'house', 'cs-picture cs-picture2', 'lazy'%}
+      {% image './src/images/LA.png', 'house', 'cs-picture cs-picture1', 'lazy'%}
+      {% image './src/images/dwerk.jpg', 'house', 'cs-picture cs-picture2', 'lazy'%}
     </div>
     <!-- Right Content Section-->
     <div class="cs-right">
       <span class="cs-topper">About Us</span>
-      <h2 class="cs-title">About Company Title</h2>
+      <h2 class="cs-title">Team Devil's <span class="text-red">Werk</span></h2>
       <p class="cs-text">
-        In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis
-        libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei
-        aptent taciti sociosqu ad litora torquent per.
+        We started in the humble area of Los Angeles, California in 2008 with a specialty in three-piece wheels.
       </p>
       <p class="cs-text">
-        In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis
-        libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei
-        aptent taciti sociosqu ad litora torquent per.
+        With 15 years of experience in modifying, repairing, and refinishing all sizes and types of wheels, we provide the highest quality wheels and services that customers trust and love. 
       </p>
-      <div class="cs-flex-group">
-        <p class="cs-flex-p">
-          In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet
-          imperdiet for mind.
-        </p>
-        <span class="cs-name">Justin Time</span>
-        <span class="cs-job">CEO-Founder</span>
-        <img
-          class="cs-quote-icon"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-          alt="gavel"
-          width="136"
-          height="77"
-/>
-      </div>
-      <a href="/about" class="button-solid">More About Us</a>
+      <p class="cs-text">
+        We have a deep inventory of wheels in addition to source or customize any wheel to your liking. Having worked with customers across many cities and multiple states, we promise to deliver to your expectations! 
+      </p>
+      <a href="/about" class="button-solid">Our Inventory</a>
     </div>
   </div>
 </section>
@@ -182,16 +176,18 @@ eleventyNavigation:
 <!-- ============================================ -->
 <section id="gallery">
   <div class="cs-container">
-    <h2 class="cs-title">Our WERK
+    <h2 class="cs-title">Our <span class="text-red">Werk</span>
       <a href="https://instagram.com/devilswerk/">
-        <img
-        aria-hidden="true"
-        decoding="async"
-        src="/assets/svgs/instagram.svg"
-        alt="appliance"
-        width="48"
-      height="48"/>
-    </a>
+        <span class="instagram">
+          <img
+          aria-hidden="true"
+          decoding="async"
+          src="/assets/svgs/instagram.svg"
+          alt="instagram"
+          width="64"
+          height="64"/>
+        </span>
+      </a>
     </h2>
     <div class="cs-image-group">
       <!-- Row 1-->
@@ -227,14 +223,14 @@ eleventyNavigation:
 <section id="cta">
   <div class="container">
     <h2 class="title">
-      Werk with us today
+      <span class="text-red">Werk</span> With Us Today
     </h2>
     <p>
       We have a deep inventory of wheels in addition to source or customize any wheel to your liking. Having worked with customers across many cities and multiple states, we promise to deliver to your expectations!
     </p>
     <a href="/contact" class="button-solid">Contact us now!</a>
   </div>
-  {% image './src/images/cabinets2.jpg', 'kitchen cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+  {% image './src/images/carwheel1.png', 'kitchen cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
 </section>
 
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

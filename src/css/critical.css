@@ -62,7 +62,6 @@
   #hero .cs-container:before {
     /* Left Line */
     content: '';
-    width: 1px;
     height: 100%;
     background: -moz-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%);
     /* FF3.6-15 */
@@ -211,12 +210,11 @@
     padding: 0 clamp(2em, 5vw, 2.5em);
   }
   #hero .cs-container {
-    padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
+    padding: clamp(7em, 27.95vw, 13.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
   }
   #hero .cs-container:after {
     /* Right Line */
     content: '';
-    width: 1px;
     height: 100%;
     background: -moz-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%);
     /* FF3.6-15 */
@@ -258,16 +256,14 @@
   .services {
     border-radius: 0.3125em;
     margin: auto;
-    margin-top: -10.4375em;
+    margin-top: -14.4375em;
     position: relative;
     z-index: 100;
     background: #fff;
     width: 90%;
     max-width: 90em;
     padding: 3.125em 1.25em;
-    border-top: 0.375em solid var(--primary);
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
-    margin-bottom: 3.125em;
   }
   .services .card {
     display: block;
@@ -339,7 +335,7 @@
     background: var(--medium);
   }
   body.dark-mode #services picture {
-    background: var(--primaryDark);
+    background: #edb305;
   }
   body.dark-mode #services h2 {
     color: #fff;
