@@ -278,7 +278,7 @@
     margin: auto;
   }
   #cta picture {
-    width: 90.0625%;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
   }
