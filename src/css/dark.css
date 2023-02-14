@@ -82,9 +82,9 @@
 /* Desktop */
 @media only screen and (min-width: 64em) {
   #dark-mode-toggle {
-    position: relative;
+    position: absolute;
     top: auto;
-    right: auto;
+    right: -1rem;
     transform: none;
     margin-left: 1.875rem;
     margin-bottom: 0rem;
