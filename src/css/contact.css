@@ -13,7 +13,6 @@
     --sectionPadding: clamp(3.75em, 7.82vw, 6.25em) 1rem;
   }
   #cs-contact {
-    font-family: 'Roboto', 'Arial', sans-serif;
     padding: var(--sectionPadding);
   }
   #cs-contact .cs-container {
@@ -21,6 +20,7 @@
     /* changes to 1280px at desktop */
     max-width: 50rem;
     margin: auto;
+    margin-top: 5rem;
   }
   #cs-contact .cs-content {
     width: 100%;
@@ -161,7 +161,6 @@
     font-size: clamp(1rem, 3vw, 1.25rem);
     line-height: 1.2em;
     font-weight: 700;
-    margin-bottom: 0.5rem;
     color: var(--bodyTextColorWhite);
     display: block;
   }
