@@ -11,7 +11,10 @@ eleventyNavigation:
     order: 5
 ---
 
-
+<section id="int-hero">
+  <h1 id="home-h">Contact Us</h1>
+  {% image './src/images/lowshot.png', 'cabinets', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
+</section>
 
 <!-- ============================================ -->
 <!--                Contact Form                  -->
@@ -23,9 +26,6 @@ eleventyNavigation:
       <div class="cs-content">
         <span class="cs-topper">Contact</span>
         <h2 class="cs-title">Get in Touch</h2>
-        <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                </p>
       </div>
       <label>
                 Name
@@ -40,8 +40,8 @@ eleventyNavigation:
                 <input required type="text" id="phone" name="phone" placeholder="Phone">
       </label>
       <label>
-                How Did You Find Us
-                <input type="text" id="find" name="find-us" placeholder="How did you find us?">
+                Subject
+                <input type="text" id="subject" name="subject" placeholder="Subject">
       </label>
       <label class="cs-label-message">
                 Message
@@ -52,14 +52,18 @@ eleventyNavigation:
     <div class="cs-right-section">
       <!--Email-->
       <span class="cs-header">Email</span>
-      <a class="cs-link" href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+      <a class="cs-link" href="mailto:info@devilswerk.com">info@devilswerk.com</a>
       <!--Phone-->
-      <span class="cs-header">Phone</span>
-      <a class="cs-link" href="tel:219-555-1234">(219) 555-1234</a>
-      <!--Address-->
 
       <!-- Background Image-->
-      {% image './src/images/skyscraper.jpg', 'building', '', 'lazy'%}
+      <img
+      aria-hidden="true"
+      decoding="async"
+      src="/assets/svgs/mail.svg"
+      alt="appliance"
+      width="500"
+      height="500"
+/>
     </div>
   </div>
 </section>

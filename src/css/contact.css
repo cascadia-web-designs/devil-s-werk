@@ -14,6 +14,8 @@
   }
   #cs-contact {
     padding: var(--sectionPadding);
+    padding-top: 0px;
+    margin-bottom: 80px;
   }
   #cs-contact .cs-container {
     width: 100%;
@@ -262,7 +264,7 @@
   }
   #cs-contact .cs-right-section {
     /* changes to 578px at 1300px wide */
-    height: 42.875rem;
+    height: 36.875rem;
     width: 40%;
     max-width: 33.875rem;
     /* prevents flexbox from squishing it */
@@ -289,7 +291,7 @@
     max-width: 100%;
   }
   #cs-contact .cs-right-section {
-    height: 36.125rem;
+
   }
 }
 /* Dark Mode */
