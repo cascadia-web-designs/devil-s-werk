@@ -615,8 +615,28 @@
 @media only screen and (min-width: 0em) {
   #footer {
     background: #1C1C1C;
-    padding: 5.25rem 0 1.25rem;
+    padding: 2.5rem 1.25rem;
     font-size: min(4vw, 1.2em);
+  }
+
+  #footer img {
+    position: absolute;
+    left: -50px;
+    bottom: -40px;
+    max-width: 300px;
+    width: calc(13vw);
+    min-height: 210px;
+  }
+
+  #footer .icons {
+    color: #fff;
+  }
+
+  #footer .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
   }
   #footer .left-section {
     margin: auto;
@@ -664,25 +684,15 @@
     margin-bottom: 0;
     margin-top: 0;
   }
-  #footer .right-section .lists ul:nth-of-type(3) {
-    margin-top: 3.125rem;
-  }
-  #footer .right-section .lists ul:nth-of-type(3) li {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  #footer .right-section .lists ul:nth-of-type(3) li:last-of-type {
-    margin-bottom: 0;
-  }
+
   #footer .right-section .lists ul li {
     list-style: none;
-    margin-bottom: 0.75rem;
     color: #fff;
-    font-size: 1.125rem;
+    font-size: 0.875rem;
     opacity: .9;
+    margin-bottom: 6px;
   }
+
   #footer .right-section .lists ul li a {
     text-decoration: none;
     color: #fff;
@@ -694,13 +704,12 @@
   }
   #footer .right-section .lists ul h2 {
     color: #fff;
-    font-size: 1.125rem;
+    font-size: 0.875rem;
     line-height: 1.16666667em;
-    margin-bottom: 2.3125rem;
     font-weight: bold;
     position: relative;
   }
-  #footer .right-section .lists ul h2:before {
+  /* #footer .right-section .lists ul h2:before {
     content: '';
     position: absolute;
     display: block;
@@ -710,7 +719,7 @@
     opacity: 1;
     bottom: -1rem;
     left: 0;
-  }
+  } */
   #footer .right-section .buttons {
     display: flex;
     justify-content: center;
@@ -752,9 +761,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 96%;
-    max-width: 82.5rem;
+    /* max-width: 82.5rem; */
     margin: auto;
     padding: 0;
   }
@@ -774,7 +783,7 @@
   }
   #footer .right-section {
     margin: 0;
-    width: 38.0625rem;
+    width: 80%;
     max-width: none;
   }
   #footer .right-section .lists {
@@ -783,17 +792,13 @@
     margin: 0;
     max-width: initial;
   }
-  #footer .right-section .lists ul:nth-of-type(3) {
-    margin-top: 0;
-  }
-  #footer .right-section .lists ul:nth-of-type(3) li:first-of-type {
-    margin-bottom: 0;
-  }
+  
   #footer .right-section .lists ul li a {
     position: relative;
   }
   #footer .right-section .lists ul li a:before {
-    content: '';
+    /*Removes the underline hover effect on links */
+    /* content: ''; */
     position: absolute;
     display: block;
     height: 0.125rem;
