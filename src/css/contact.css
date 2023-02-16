@@ -172,7 +172,7 @@
     line-height: 1.2em;
     text-decoration: none;
     margin-bottom: 1.25rem;
-    color: var(--bodyTextColorWhite);
+    color: var(--primary);
     display: block;
     position: relative;
   }
