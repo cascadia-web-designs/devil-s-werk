@@ -620,12 +620,7 @@
   }
 
   #footer img {
-    position: absolute;
-    left: -50px;
-    bottom: -40px;
-    max-width: 300px;
-    width: calc(13vw);
-    min-height: 210px;
+    display: none;
   }
 
   #footer .icons {
@@ -673,6 +668,9 @@
   }
   #footer .right-section .lists {
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 96%;
@@ -757,6 +755,17 @@
   #footer {
     font-size: min(1.2vw, 1em);
   }
+
+  #footer img {
+    display: block;
+    position: absolute;
+    left: -50px;
+    bottom: -40px;
+    max-width: 300px;
+    width: calc(13vw);
+    min-height: 210px;
+  }
+
   #footer .container {
     display: flex;
     flex-direction: row;
@@ -767,6 +776,19 @@
     margin: auto;
     padding: 0;
   }
+
+  #footer .right-section .lists {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    text-align: initial;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 96%;
+    max-width: 19.1875rem;
+    margin: auto;
+  }
+
   #footer .left-section {
     width: 25.5625rem;
     margin: 0;
@@ -792,7 +814,7 @@
     margin: 0;
     max-width: initial;
   }
-  
+
   #footer .right-section .lists ul li a {
     position: relative;
   }
