@@ -145,8 +145,7 @@
     width: 100%;
   }
   #cs-contact .cs-right-section {
-    position: relative;
-    height: 20rem;
+    position: relative; 
     /* 24px - 40px top & bottom */
     /* 20px - 40px left & right */
     padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 3vw, 2.5rem);
@@ -158,6 +157,11 @@
     align-items: flex-start;
     justify-content: flex-end;
   }
+  
+  #cs-contact .cs-right-section img {
+    width: 350px;
+  }
+
   #cs-contact .cs-header {
     /* 16px - 20px */
     font-size: clamp(1rem, 3vw, 1.25rem);
@@ -234,6 +238,10 @@
 }
 /* Tablet - 700px */
 @media only screen and (min-width: 43.75em) {
+  #cs-contact .cs-right-section img {
+    width: 500px;
+  }
+
   #cs-contact #cs-form {
     display: flex;
     justify-content: space-between;

@@ -823,3 +823,13 @@
 .text-red {
   color: #b80024;
 }
+.werk-flex {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.instagram {
+  margin-top: 2px;
+}
