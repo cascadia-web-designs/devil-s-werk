@@ -316,7 +316,7 @@
     font-weight: bold;
   }
   #navigation #navbar-menu ul li a.active:before {
-    content: '';
+    /* content: ''; */
     position: absolute;
     display: block;
     height: 0.5rem;
