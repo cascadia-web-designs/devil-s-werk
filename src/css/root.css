@@ -316,7 +316,7 @@
     font-weight: bold;
   }
   #navigation #navbar-menu ul li a.active:before {
-    content: '';
+    /* content: ''; */
     position: absolute;
     display: block;
     height: 0.5rem;
@@ -515,8 +515,13 @@
     display: none !important;
   }
   body.dark-mode #navigation #navbar-menu ul li a {
-    /* color: #fff; */
+    color: #fff;
   }
+
+  body.dark-mode #navigation #navbar-menu ul li a:hover {
+    color: var(--primary);
+  }
+
   body.dark-mode #navigation #navbar-menu ul li a:before {
     /* background: var(--accent); */
   }
