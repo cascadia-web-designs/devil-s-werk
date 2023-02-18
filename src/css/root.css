@@ -761,9 +761,8 @@
     position: absolute;
     left: -50px;
     bottom: -40px;
-    max-width: 300px;
-    width: calc(13vw);
-    min-height: 210px;
+    max-width: 2000px;
+    height: 210px;
   }
 
   #footer .container {
@@ -841,6 +840,19 @@
     display: inline-block;
   }
 }
+
+@media only screen and (min-width: 2000px) {
+  #footer img {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    min-height: calc(210px + 0.8vw);
+  }
+  #footer .container {
+    justify-content: center;
+  }
+}
+
 /* Dark Mode */
 @media only screen and (min-width: 0em) {
   body.dark-mode #footer {
