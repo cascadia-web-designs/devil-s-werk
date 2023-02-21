@@ -104,10 +104,11 @@
     padding: 0 1.875rem;
     position: relative;
     z-index: 1;
-    background-color: var(--primary);
+    background-color: #edb305;
     color: #000;
     transition: color .3s;
     transition-delay: .1s;
+    border-radius: 0.25rem;
   }
   .button-solid:hover {
     color: #fff;
@@ -124,9 +125,10 @@
     top: 0;
     left: 0;
     z-index: -1;
-    background-color: #000;
+    background-color: var(--primary);
     width: 0;
     transition: width .3s;
+    border-radius: 0.25rem;
   }
   .skip {
     position: absolute;
@@ -353,7 +355,7 @@
   }
   ::-webkit-scrollbar-thumb {
     border-radius: 0.625em;
-    background: var(--primary);
+    background: #edb305;
   }
   body.scroll #navigation .background-color-div {
     height: 100%;
@@ -865,7 +867,7 @@
   }
 }
 .text-red {
-  color: #b80024;
+  color: #db2347;
 }
 .werk-flex {
   display: flex;
