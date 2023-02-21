@@ -253,6 +253,12 @@
 <--- -------------------------- -*/
 /* Mobile */
 @media only screen and (min-width: 0em) {
+  .service-title {
+    margin-left: 0px;
+    font-size: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
   .services {
     border-radius: 0.3125em;
     margin: auto;
@@ -265,6 +271,12 @@
     padding: 3.125em 1.25em;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
   }
+
+  .services-container {
+    flex-direction: column;
+    gap: 0rem;
+  }
+
   .services .card {
     display: block;
     width: 100%;
@@ -298,6 +310,7 @@
     font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 0.65em;
+    white-space: nowrap;
   }
   .services .card p {
     text-align: center;
@@ -311,10 +324,24 @@
   .services {
     font-size: min(1.8vw, 1em);
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.15rem;
     width: 98%;
   }
+
+  .service-title {
+    margin-left: 36px;
+    margin-bottom: 0px;
+  }
+
+  .services-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .services .card {
     margin: 0;
     max-width: 20.3125em;
@@ -325,6 +352,11 @@
   .services {
     padding: 3.125em 5em;
   }
+
+  .services-container {
+    gap: 8rem;
+  }
+
   .services .card {
     max-width: 22.3125em;
   }
