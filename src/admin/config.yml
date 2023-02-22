@@ -4,14 +4,14 @@ backend:
 
 local_backend: true
 # change url to a link to the image you want to use, no file paths, must be a URL
-logo_url: https://d33wubrfki0l68.cloudfront.net/c89899bad974606ce0e0f5d5a95842dc787dcb56/7fe98/assets/images/logo-blue.png
+logo_url: https://i1.wp.com/www.devilswerk.com/wp-content/uploads/brizy/imgs/image1-1-221x48x0x4x221x41x1545528033.jpeg?w=930&ssl=1
 
 media_folder: 'public/images/blog'
 public_folder: '/images/blog'
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
+  - name: 'inventory'
+    label: 'Inventory'
     folder: 'src/blog'
     create: true
     slug: '{{pageName}}'
