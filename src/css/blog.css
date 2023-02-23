@@ -1,6 +1,9 @@
 /*-- -------------------------- -->
 <---        Core Styles         -->
 <--- -------------------------- -*/
+a {
+  text-decoration: none;
+}
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
   :root {
@@ -17,7 +20,7 @@
   }
   .blog-container {
     width: 94%;
-    max-width: 70em;
+    max-width: 80em;
     margin: auto;
   }
   .blog-link {
@@ -215,11 +218,19 @@
   }
   .main-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 3.125em;
+    gap: 3.125em;
     width: 100%;
+    flex-wrap: wrap;
+  }
+  .main-content2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.125em;
+    width: 100%;
+    flex-wrap: wrap;
   }
 }
 /* Tablet - 1024px */
@@ -236,31 +247,43 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
   .recent-articles {
+    box-shadow: 10px 10px 20px rgb(0 0 0 / 20%);
     overflow: hidden;
-    max-width: 49.6875em;
+    /* max-width: 49.6875em;
+    min-width: 20rem; */
     flex: none;
-    width: 100%;
+    transform: scale(1.0);
+    transition: transform 200ms ease-in-out;
+    border-radius: 1rem;
   }
+
+  .recent-articles:hover {
+    transform: scale(1.1);
+    transition: transform 200ms ease-in-out;
+  }
+
+
   .recent-articles .blog-mainImage {
-    width: 100%;
-    height: clamp(200px, 30vw, 400px);
+    /* width: 100%; */
+    height: clamp(50px, 30vw, 250px); 
     position: relative;
     display: block;
     border-radius: 0.5em 0.5em 0 0;
     overflow: hidden;
   }
   .recent-articles .blog-mainImage img {
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    left: 0;
+    left: 0; */
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
   }
   .recent-articles .article-group {
     padding: clamp(30px, 5vw, 50px);
     border: 1px solid #ebebeb;
-    border-radius: 0 0 0.5em 0.5em;
+    border-radius: 0 0 1rem 1rem;
   }
   .recent-articles .blog-author-img {
     width: 2em;
@@ -355,7 +378,10 @@
 /* Mobile - 1024px */
 @media only screen and (min-width: 64em) {
   .recent-articles .blog-h1 {
-    max-width: 31.25rem;
+    max-width: 16.25rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 /* Dark Mode */
