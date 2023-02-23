@@ -2,6 +2,9 @@
 <---           Hero             -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
+a{
+  text-decoration: none;
+}
 @media only screen and (min-width: 0em) {
   #hero {
     font-family: 'Albert Sans', 'Arial', sans-serif;
@@ -331,6 +334,12 @@
     justify-content: center;
     gap: 2.15rem;
     width: 98%;
+    transform: scale(1.0);
+    transition: transform 200ms ease-in-out;
+  }
+  .services:hover {
+    transform: scale(1.1);
+    transition: transform 200ms ease-in-out;
   }
 
   .service-title {
@@ -367,6 +376,7 @@
 @media only screen and (min-width: 0em) {
   body.dark-mode #services {
     background: var(--medium);
+    
   }
   body.dark-mode #services picture {
     background: #edb305;
