@@ -230,7 +230,6 @@ a {
     justify-content: center;
     gap: 3.125em;
     width: 100%;
-    flex-wrap: wrap;
   }
 }
 /* Tablet - 1024px */

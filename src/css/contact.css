@@ -49,6 +49,17 @@
     color: var(--headerColor);
     position: relative;
   }
+  #cs-contact .cs-title2 {
+
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: left;
+    max-width: 50rem;
+    margin: 0 auto 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  
   #cs-contact .cs-text {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
@@ -159,8 +170,23 @@
     align-items: flex-start;
     justify-content: flex-end;
   }
+  #cs-contact .cs-right-section2 {
+    position: relative; 
+    /* 24px - 40px top & bottom */
+    /* 20px - 40px left & right */
+    border-radius: 0.5rem;
+    /* cuts off corners on img tag */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
   
   #cs-contact .cs-right-section img {
+    width: 350px;
+  }
+  #cs-contact .cs-right-section2 img {
     width: 350px;
   }
 
@@ -243,6 +269,9 @@
   #cs-contact .cs-right-section img {
     width: 500px;
   }
+  #cs-contact .cs-right-section2 img {
+    width: 500px;
+  }
 
   #cs-contact #cs-form {
     display: flex;
@@ -280,6 +309,13 @@
     /* prevents flexbox from squishing it */
     flex: none;
   }
+  #cs-contact .cs-right-section2 {
+    /* changes to 578px at 1300px wide */
+    width: 40%;
+    max-width: 33.875rem;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
   #cs-contact .cs-right-section:hover .cs-bg-picture {
     transform: scale(1.1);
   }
@@ -308,6 +344,9 @@
 @media only screen and (min-width: 0em) {
   body.dark-mode #cs-contact .cs-text,
   body.dark-mode #cs-contact .cs-title {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #cs-contact .cs-title2 {
     color: var(--bodyTextColorWhite);
   }
   body.dark-mode #cs-contact #cs-form label,
