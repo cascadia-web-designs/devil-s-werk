@@ -50,11 +50,14 @@ eleventyNavigation:
                     </picture>
                     <!--Article Info-->
                     <div class="article-group">
+                        <p class="condition">
+                            {{ post.data.condition }}
+                        </p>
                         <h2 class="blog-h1">
                             {{ post.data.wheelName}}
                         </h2>
                         <p class="blog-desc">
-                            Price: ${{ post.data.wheelPrice }}
+                            ${{ post.data.wheelPrice }}
                         </p>
                         <!-- <a href="{{ post.url }}" class="blog-link">Continue Reading</a> -->
                     </div>
