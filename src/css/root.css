@@ -755,6 +755,17 @@
   #footer .credit .copyright {
     display: block;
     font-size: 1rem;
+    
+  }
+  #footer .cs-link {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    line-height: 1.2em;
+    text-decoration: none;
+    margin-bottom: 1.25rem;
+    color: white;
+    display: block;
+    position: relative;
   }
 }
 /* Small Desktop */
