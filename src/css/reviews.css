@@ -36,7 +36,6 @@ a {
     box-shadow: 10px 10px 20px rgb(0 0 0 / 20%);
     width: 100%;
     max-width: 35rem;
-    height: 350px;
     margin: auto;
     margin-bottom: 5.5rem;
     border-radius: 0.3125rem;
@@ -61,6 +60,11 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+  }
+
+  #reviews .review picture img {
+    width: 3em;
+    height: 3em;
   }
 
   #reviews .review h3 {
