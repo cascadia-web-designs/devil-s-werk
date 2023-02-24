@@ -19,9 +19,9 @@ a {
     font-size: 100%;
   }
   .blog-container {
-    width: 94%;
-    max-width: 80em;
-    margin: auto;
+    /* width: 94%;
+    max-width: 80em; */
+    /* margin: auto; */
   }
   .blog-link {
     font-size: 1rem;
@@ -215,14 +215,15 @@ a {
     align-items: center;
     flex-direction: column;
     row-gap: 3.125em;
+    padding: 25px 25px;
+
   }
   .main-content {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 20rem));
     justify-content: center;
     gap: 3.125em;
     width: 100%;
-    flex-wrap: wrap;
   }
   .main-content2 {
     display: flex;
@@ -235,9 +236,12 @@ a {
 /* Tablet - 1024px */
 @media only screen and (min-width: 64em) {
   .main-content-wrapper {
-    flex-direction: row;
+    padding: 10rem 5rem;
+    /* display: flex;
+    flex-direction: column; */
+    /* flex-direction: row;
     align-items: flex-start;
-    column-gap: 1.25em;
+    column-gap: 1.25em; */
   }
 }
 /*-- -------------------------- -->
@@ -264,7 +268,7 @@ a {
 
   .recent-articles .blog-mainImage {
     /* width: 100%; */
-    height: clamp(50px, 30vw, 250px); 
+    height: clamp(250px, 30vw, 250px);
     position: relative;
     display: block;
     border-radius: 0.5em 0.5em 0 0;
@@ -280,7 +284,11 @@ a {
     border-radius: 1rem 1rem 0 0;
   }
   .recent-articles .article-group {
-    padding: clamp(30px, 5vw, 50px);
+    /* padding: clamp(30px, 5vw, 30px); */
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 20px;
     border: 1px solid #ebebeb;
     border-radius: 0 0 1rem 1rem;
   }
@@ -320,16 +328,21 @@ a {
     display: block;
   }
   .recent-articles .blog-h1 {
-    font-size: clamp(20px, 5vw, 32px);
+    font-size: clamp(16px, 5vw, 16px);
     line-height: 1.4em;
     font-weight: 700;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
     color: var(--bodyHeader);
   }
   .recent-articles .blog-desc {
-    font-size: 1rem;
+    font-size: (20px, 5vw, 20px);
     line-height: 1.5em;
-    margin: 1rem 0 2rem;
+    /* margin: 1rem 0 2rem; */
+    /* color: var(--bodyText); */
+  }
+
+  .condition {
+    font-size: 14px;
     color: var(--bodyText);
   }
   .recent-articles .blog-link {
@@ -533,7 +546,7 @@ a {
   }
   .blog-article .blog-mainImage {
     width: 100%;
-    height: clamp(200px, 30vw, 400px);
+    height: clamp(200px, 30vw, 200px);
     position: relative;
     display: block;
     border-radius: 0.5em;
