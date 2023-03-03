@@ -21,7 +21,7 @@ collections:
       - { label: 'Wheel Price', name: 'wheelPrice', widget: 'number' }
       - { label: 'Wheel Size', name: 'wheelSize', widget: 'string' }
       - { label: 'Store Image', name: 'image', widget: 'image' }
-      - { label: 'Extra Image', name: 'extraImage', widget: 'image', media_library: config:multiple: true }
+      - { label: 'Extra Image', name: 'extraImage', widget: 'image', media_library: config: multiple: true }
       - { label: 'Condition', name: 'condition', widget: 'string' }
       - { label: 'Brand/Model', name: 'brandModel', widget: 'string' }
       - { label: 'Bolt Pattern', name: 'boltPattern', widget: 'string'}
