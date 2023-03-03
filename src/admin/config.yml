@@ -15,32 +15,17 @@ collections:
     folder: 'src/inventory'
     create: true
     slug: '{{pageName}}'
+    allow_multiple: true
     fields:
       - { label: 'Page-Name-with-dashes-only', name: 'pageName', widget: 'string' }
       - { label: 'Wheel Name', name: 'wheelName', widget: 'string' }
       - { label: 'Wheel Price', name: 'wheelPrice', widget: 'number' }
-      - { label: 'Featured Image', name: 'image', widget: 'image' }
+      - { label: 'Wheel Size', name: 'wheelSize', widget: 'string' }
+      - { label: 'Store Image', name: 'image', widget: 'image' }
+      - { label: 'Extra Images', name: 'image', widget: 'image'}
       - { label: 'Condition', name: 'condition', widget: 'string' }
       - { label: 'Brand/Model', name: 'brandModel', widget: 'string' }
       - { label: 'Bolt Pattern', name: 'boltPattern', widget: 'string' }
       - { label: 'Front', name: 'front', widget: 'string' }
       - { label: 'Rear', name: 'rear', widget: 'string' }
       - { label: 'Color Face', name: 'colorFace', widget: 'string' }
-      # - { label: 'Blog Title', name: 'blogTitle', widget: 'string' }
-      # - { label: 'Title Tag', name: 'titleTag', widget: 'string' }
-      # - { label: 'Description', name: 'blogDescription', widget: 'string' }
-      # - { label: 'Author', name: 'author', widget: 'string' }
-      # - { label: 'Date', name: 'date', widget: 'datetime' }
-      # - { label: 'Tags', name: 'tags', widget: 'list', default: ['post'] }
-      # - { label: 'Featured Image', name: 'image', widget: 'image' }
-      # 
-      # - { label: 'Body', name: 'body', widget: 'markdown' }
-      
-        #       <h1 class="blog-h1">{{ wheelName }}</h1>
-        # <h1 class="blog-h1">{{ wheelPrice }}</h1>
-        # <h1 class="blog-h1">{{ condition }}</h1>
-        # <h1 class="blog-h1">{{ brand/model }}</h1>
-        # <h1 class="blog-h1">{{ boltPattern }}</h1>
-        # <h1 class="blog-h1">{{ front }}</h1>
-        # <h1 class="blog-h1">{{ rear }}</h1>
-        # <h1 class="blog-h1">{{ colorFace }}</h1>
