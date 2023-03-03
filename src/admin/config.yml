@@ -8,6 +8,11 @@ logo_url: https://i1.wp.com/www.devilswerk.com/wp-content/uploads/brizy/imgs/ima
 
 media_folder: 'public/images/blog'
 public_folder: '/images/blog'
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: de7gc35gz
+    api_key: 145971518884253
 
 collections:
   - name: 'inventory'
@@ -22,7 +27,6 @@ collections:
       - { label: 'Wheel Size', name: 'wheelSize', widget: 'string' }
       - { label: 'Store Image', name: 'image', widget: 'image' }
       - { label: 'Extra Images', name: 'extraImage', widget: 'image', allow_multiple: true, media_library: { config: { multiple: true, max_files: 10 } }, required: false }
-      - { label: 'Moreimages', name: 'images', widget: 'image', allow_multiple: true, required: false}
       - { label: 'Condition', name: 'condition', widget: 'string' }
       - { label: 'Brand/Model', name: 'brandModel', widget: 'string' }
       - { label: 'Bolt Pattern', name: 'boltPattern', widget: 'string'}
