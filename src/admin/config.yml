@@ -15,17 +15,16 @@ collections:
     folder: 'src/inventory'
     create: true
     slug: '{{pageName}}'
-    allow_multiple: true
     fields:
       - { label: 'Page-Name-with-dashes-only', name: 'pageName', widget: 'string' }
       - { label: 'Wheel Name', name: 'wheelName', widget: 'string' }
       - { label: 'Wheel Price', name: 'wheelPrice', widget: 'number' }
       - { label: 'Wheel Size', name: 'wheelSize', widget: 'string' }
       - { label: 'Store Image', name: 'image', widget: 'image' }
-      - { label: 'Extra Images', name: 'extraImage', widget: 'image'}
+      - { label: 'Extra Images', name: 'extraImage', widget: 'image', allow_multiple: true}
       - { label: 'Condition', name: 'condition', widget: 'string' }
       - { label: 'Brand/Model', name: 'brandModel', widget: 'string' }
-      - { label: 'Bolt Pattern', name: 'boltPattern', widget: 'string' }
+      - { label: 'Bolt Pattern', name: 'boltPattern', widget: 'string'}
       - { label: 'Front', name: 'front', widget: 'string' }
       - { label: 'Rear', name: 'rear', widget: 'string' }
       - { label: 'Color Face', name: 'colorFace', widget: 'string' }
