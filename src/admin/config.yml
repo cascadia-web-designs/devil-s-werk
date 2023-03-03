@@ -15,13 +15,15 @@ collections:
     folder: 'src/inventory'
     create: true
     slug: '{{pageName}}'
+    editor:
+      preview: false
     fields:
       - { label: 'Page-Name-with-dashes-only', name: 'pageName', widget: 'string' }
       - { label: 'Wheel Name', name: 'wheelName', widget: 'string' }
       - { label: 'Wheel Price', name: 'wheelPrice', widget: 'number' }
       - { label: 'Wheel Size', name: 'wheelSize', widget: 'string' }
       - { label: 'Store Image', name: 'image', widget: 'image' }
-      - { label: 'Extra Image', name: 'extraImage', widget: 'image', allow_multiple: true, media_library: { config: { multiple: true, max_files: 10 } }, required: false}
+      - { label: 'Extra Images', name: 'extraImage', widget: 'image', allow_multiple: true, media_library: { config: { multiple: true, max_files: 10 } }, required: false}
       - { label: 'Condition', name: 'condition', widget: 'string' }
       - { label: 'Brand/Model', name: 'brandModel', widget: 'string' }
       - { label: 'Bolt Pattern', name: 'boltPattern', widget: 'string'}
