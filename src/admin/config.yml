@@ -22,7 +22,7 @@ collections:
       - { label: 'Wheel Size', name: 'wheelSize', widget: 'string' }
       - { label: 'Store Image', name: 'image', widget: 'image' }
       - { label: 'Extra Images', name: 'extraImage', widget: 'image', allow_multiple: true, media_library: { config: { multiple: true, max_files: 10 } }, required: false }
-      - { label: 'Moreimages', name: 'images', widget: 'image', required: false }
+      - { label: 'Moreimages', name: 'images', widget: 'image', allow_multiple: true, required: false}
       - { label: 'Condition', name: 'condition', widget: 'string' }
       - { label: 'Brand/Model', name: 'brandModel', widget: 'string' }
       - { label: 'Bolt Pattern', name: 'boltPattern', widget: 'string'}
