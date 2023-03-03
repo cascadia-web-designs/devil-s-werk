@@ -8,9 +8,6 @@ logo_url: https://i1.wp.com/www.devilswerk.com/wp-content/uploads/brizy/imgs/ima
 
 media_folder: 'public/images/blog'
 public_folder: '/images/blog'
-media_library:
-  config: 
-    max_file_size: 10
 
 collections:
   - name: 'inventory'
