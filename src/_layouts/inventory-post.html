@@ -12,7 +12,7 @@ eleventyComputed:
 <!-- ============================================ -->
 <!--                    LANDING                   -->
 <!-- ============================================ -->
-
+<script defer src="/assets/js/order.js"></script>
 <!-- <section id="int-hero">
     {% image './src/images/lowshot.png', 'low photoshot of tires', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
 </section>
@@ -47,7 +47,6 @@ eleventyComputed:
 <!-- ============================================ -->
 <!--                Contact Form                  -->
 <!-- ============================================ -->
-
 <section id="cs-contact">
     <div class="cs-container">
         <div class="cs-content">
@@ -60,11 +59,27 @@ eleventyComputed:
             <h2 class="cs-title2">Rear: {{ rear }}</h2>
             <h2 class="cs-title2">Color Face: {{ colorFace }}</h2>
             <h2 class="cs-title2">Price: ${{ wheelPrice }}</h2>
-            <a href="/contact" class="button-solid">Order Now!</a>
+            <button id="order" class="button-solid">Order Now!</button>
         </div>
+        <form id="form" action="mailto:kairukencode@gmail.com" method="POST" class="gone">
+            <div>
+                <label>Name</label>
+                <input placeholder="Name" name="name"/>
+            </div>
+            <div>
+                <label>Subject</label>
+                <input placeholder="Subject" value="Ordering - {{wheelName}}"/>
+            </div>
+            <div>
+                <label>Body</label>
+                <input placeholder="Body" name="body"/>
+            </div>
+            <button type="submit" value="send">Submit</button>
+        </form>
     <div class="cs-right-section2">
         <img src="{{ image }}" alt="{{ imageAlt }}"  decoding="async"/>
         <a class="cs-link cs-padding" href="mailto:info@devilswerk.com">info@devilswerk.com</a>
     </div>
     </div>
+    <div id="page-mask"></div>
 </section>
