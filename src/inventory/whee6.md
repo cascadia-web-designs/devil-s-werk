@@ -1,6 +1,6 @@
 ---
-pageName: whee6
-wheelName: wheel6
+pageName: whee7
+wheelName: wheel7
 wheelPrice: 7777
 wheelSize: big
 image: /images/blog/cleantires_waifu2x_photo_noise3_scale.png
