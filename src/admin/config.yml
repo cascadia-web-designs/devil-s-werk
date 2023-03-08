@@ -20,8 +20,16 @@ collections:
       - { label: 'Wheel Name', name: 'wheelName', widget: 'string' }
       - { label: 'Wheel Price', name: 'wheelPrice', widget: 'number' }
       - { label: 'Wheel Size', name: 'wheelSize', widget: 'string' }
-      - { label: 'Store Image', name: 'image', widget: 'image' }
-      - { label: 'Extra Images', name: 'extraImage', widget: 'image', allow_multiple: true, media_library: { config: { max_file_size: 10 } }, required: false }
+      - { label: 'Front Image', name: 'image', widget: 'image' }
+      - { label: 'Extra Image1', name: 'extraImage1', widget: 'image' }
+      - { label: 'Extra Image2', name: 'extraImage2', widget: 'image' }
+      - { label: 'Extra Image3', name: 'extraImage3', widget: 'image' }
+      - { label: 'Extra Image4', name: 'extraImage4', widget: 'image' }
+      - { label: 'Extra Image5', name: 'extraImage5', widget: 'image' }
+      - { label: 'Extra Image6', name: 'extraImage6', widget: 'image' }
+      - { label: 'Extra Image7', name: 'extraImage7', widget: 'image' }
+      - { label: 'Extra Image8', name: 'extraImage8', widget: 'image' }
+      - { label: 'Extra Image9', name: 'extraImage9', widget: 'image' }
       - { label: 'Condition', name: 'condition', widget: 'string' }
       - { label: 'Brand/Model', name: 'brandModel', widget: 'string' }
       - { label: 'Bolt Pattern', name: 'boltPattern', widget: 'string'}
