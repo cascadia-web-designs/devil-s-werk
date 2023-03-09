@@ -13,6 +13,7 @@ eleventyComputed:
 <!--                    LANDING                   -->
 <!-- ============================================ -->
 <script defer src="/assets/js/order.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <!-- <section id="int-hero">
     {% image './src/images/lowshot.png', 'low photoshot of tires', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
 </section>
@@ -61,21 +62,25 @@ eleventyComputed:
             <h2 class="cs-title2">Price: ${{ wheelPrice }}</h2>
             <button id="order" class="button-solid">Order Now!</button>
         </div>
-        <form id="form" action="mailto:kairukencode@gmail.com" method="POST" class="gone">
+        </form>
+        <div id="orderform" class="gone">
+            <button id="xbutton">X</button>
+            <h2>Ordering {{wheelName}}</h2>
+            <input placeholder="Subject" value="Ordering - {{wheelName}}" id="subjectinput" hidden/>
             <div>
                 <label>Name</label>
-                <input placeholder="Name" name="name"/>
+                <input placeholder="Name" name="name" id="nameinput"/>
             </div>
             <div>
-                <label>Subject</label>
-                <input placeholder="Subject" value="Ordering - {{wheelName}}"/>
+                <label>Email</label>
+                <input placeholder="Email" name="email" id="emailinput"/>
             </div>
             <div>
                 <label>Body</label>
-                <input placeholder="Body" name="body"/>
+                <input placeholder="Body" name="body" id="bodyinput"/>
             </div>
-            <button type="submit" value="send">Submit</button>
-        </form>
+            <button id="submitorder">Submit</button>
+        </div>
     <div class="cs-right-section2">
         <img src="{{ image }}" alt="{{ imageAlt }}"  decoding="async"/>
         <a class="cs-link cs-padding" href="mailto:info@devilswerk.com">info@devilswerk.com</a>
