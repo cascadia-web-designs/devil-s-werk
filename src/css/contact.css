@@ -2,6 +2,7 @@
 <---          Contact           -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
+
 @media only screen and (min-width: 0em) {
   :root {
     /* 13px - 16px */
@@ -176,18 +177,21 @@
     /* 20px - 40px left & right */
     border-radius: 0.5rem;
     /* cuts off corners on img tag */
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
   }
-  
+  #cs-contact .row {
+    display: flex;
+    flex-direction: column;
+  }
   #cs-contact .cs-right-section img {
     width: 350px;
   }
   #cs-contact .cs-right-section2 img {
-    width: 350px;
+    width: 275px;
   }
 
   #cs-contact .cs-header {
@@ -270,7 +274,7 @@
     width: 500px;
   }
   #cs-contact .cs-right-section2 img {
-    width: 500px;
+    /* width: 500px; */
   }
 
   #cs-contact #cs-form {
@@ -311,10 +315,12 @@
   }
   #cs-contact .cs-right-section2 {
     /* changes to 578px at 1300px wide */
-    width: 40%;
-    max-width: 33.875rem;
     /* prevents flexbox from squishing it */
-    flex: none;
+  }
+
+  #cs-contact .row {
+    display: flex;
+    flex-direction: row;
   }
   #cs-contact .cs-right-section:hover .cs-bg-picture {
     transform: scale(1.1);

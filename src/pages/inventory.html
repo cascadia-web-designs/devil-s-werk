@@ -24,34 +24,25 @@ eleventyNavigation:
 <!-- ============================================ -->
 <!--              Main Blog Content               -->
 <!-- ============================================ -->
-
 <div class="blog-container main-content-wrapper">
     <div class="inventory-product">
         <div class="">FILTERS</div>
-        <select>
+        <select onclick="filterSelection(value)">
             <option value="">All Sizes</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
+            <option value="17in">17″</option>
+            <option value="18in">18″</option>
+            <option value="19in">19″</option>
+            <option value="20in">20″</option>
+            <option value="Accessories">Accessories</option>
         </select>
+        <div class="">SORT BY</div>
         <select>
-            <option value="">All</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
+            <option value="">Recent</option>
+            <option value="option1">Oldest to New</option>
+            <option value="option2">Highest to Lowest</option>
+            <option value="option3">Lowest to Highest</option>
         </select>
-        <select>
-            <option value="">All</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-        </select>
-        <select>
-            <option value="">All</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-        </select>
+        <div class="search-text">SEARCH</div>
         <div class="search-div">
             <img
             aria-hidden="true"
@@ -63,21 +54,19 @@ eleventyNavigation:
             />
             <form name="search" method="post">
                 <label>
-                    <input class="search-field" type="text" id="name" name="name" placeholder="Search">
+                    <input class="search-field" onkeyup="filterSelection(value)" type="text" id="name" name="name" placeholder="Search">
                 </label>
             </form>
         </div>
     </div>
+    <hr style="color: black; height: 1px; width: 90%;">
     <!--Main content -->
     <div class="main-content">
-        <!-- ============================================ -->
-        <!--                 Blog Articles                -->
-        <!-- ============================================ -->
-
         {% if collections.post | length == 0 %}
             <h1>No Recent Posts</h1>
         {% endif %}
         {%- for post in collections.post | reverse -%}
+        <div class="filter-div {{ post.data.wheelName }} {{ post.data.wheelPrice }} {{ post.data.wheelSize }} {{ post.data.condition }} {{ post.data.brandModel }} {{ post.data.boltPattern }} {{ post.data.front }} {{ post.data.rear }} {{ post.data.colorFace }}">
             <a href="{{ post.url }}">
                 <article class="recent-articles">
                     <!--Main Article Image-->
@@ -105,11 +94,41 @@ eleventyNavigation:
                     </div>
                 </article>
             </a>
+        </div>
         {%- endfor -%}
     </div>
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
 
-    <!-- ============================================ -->
-    <!--                Featured Posts                -->
-    <!-- ============================================ -->
-
+            var x, i;
+            x = document.getElementsByClassName("filter-div");
+            if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+            }
+        }
+        
+        function AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            }
+        }
+        
+        function RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+            }
+            element.className = arr1.join(" ");
+        }
+    </script>
 </div>

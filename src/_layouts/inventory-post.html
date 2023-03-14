@@ -38,7 +38,6 @@ eleventyComputed:
         </article>
     </div>
 </div> -->
-
 <section id="int-hero">
     <h1 id="home-h">{{ wheelName }}</h1>
     {% image './src/images/lowshot.png', 'cabinets', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
@@ -47,12 +46,12 @@ eleventyComputed:
 <!-- ============================================ -->
 <!--                Contact Form                  -->
 <!-- ============================================ -->
-
 <section id="cs-contact">
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Product Info</span>
             <h2 class="cs-title2">{{ wheelName }}</h2>
+            <h2 class="cs-title2">Wheel Size: {{ wheelSize }}</h2>
             <h2 class="cs-title2">Condition: {{ condition }}</h2>
             <h2 class="cs-title2">Brand/Model: {{ brandModel }}</h2>
             <h2 class="cs-title2">Bolt Pattern: {{ boltPattern }}</h2>
@@ -63,8 +62,21 @@ eleventyComputed:
             <a href="/contact" class="button-solid">Order Now!</a>
         </div>
     <div class="cs-right-section2">
-        <img src="{{ image }}" alt="{{ imageAlt }}"  decoding="async"/>
-        <a class="cs-link cs-padding" href="mailto:info@devilswerk.com">info@devilswerk.com</a>
+        <div class="row">
+            <img src="{{ extraImage1 }}" alt="{{ imageAlt }}"  decoding="async"/>
+            <img src="{{ extraImage2 }}" alt="{{ imageAlt }}"  decoding="async"/>
+            <img src="{{ extraImage3 }}" alt="{{ imageAlt }}"  decoding="async"/>
+        </div> 
+        <div class="row">
+            <img src="{{ extraImage4 }}" alt="{{ imageAlt }}"  decoding="async"/>
+            <img src="{{ extraImage5 }}" alt="{{ imageAlt }}"  decoding="async"/>
+            <img src="{{ extraImage6 }}" alt="{{ imageAlt }}"  decoding="async"/>
+        </div>
+        <div class="row">
+            <img src="{{ extraImage7 }}" alt="{{ imageAlt }}"  decoding="async"/>
+            <img src="{{ extraImage8 }}" alt="{{ imageAlt }}"  decoding="async"/>
+            <img src="{{ extraImage9 }}" alt="{{ imageAlt }}"  decoding="async"/>
+        </div>
     </div>
     </div>
 </section>
