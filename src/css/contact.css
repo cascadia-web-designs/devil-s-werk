@@ -1,6 +1,33 @@
 /*-- -------------------------- -->
 <---          Contact           -->
 <--- -------------------------- -*/
+
+.gone {
+  display: none;
+}
+
+.show {
+  display: block;
+  position: fixed;
+  left: 20%;
+  right: 20%;
+  bottom: 20%;
+  top: 20%;
+  background-color: white;
+  border: solid 2px gray;
+  z-index: 200002;
+}
+
+.darken {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 200001;
+}
+
 /* Mobile - 360px */
 
 @media only screen and (min-width: 0em) {

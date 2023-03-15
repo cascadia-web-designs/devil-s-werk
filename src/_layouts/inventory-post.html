@@ -12,7 +12,8 @@ eleventyComputed:
 <!-- ============================================ -->
 <!--                    LANDING                   -->
 <!-- ============================================ -->
-
+<script defer src="/assets/js/order.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <!-- <section id="int-hero">
     {% image './src/images/lowshot.png', 'low photoshot of tires', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
 </section>
@@ -59,7 +60,26 @@ eleventyComputed:
             <h2 class="cs-title2">Rear: {{ rear }}</h2>
             <h2 class="cs-title2">Color Face: {{ colorFace }}</h2>
             <h2 class="cs-title2">Price: ${{ wheelPrice }}</h2>
-            <a href="/contact" class="button-solid">Order Now!</a>
+            <button id="order" class="button-solid">Order Now!</button>
+        </div>
+        </form>
+        <div id="orderform" class="gone">
+            <button id="xbutton">X</button>
+            <h2>Ordering {{wheelName}}</h2>
+            <input placeholder="Subject" value="Ordering - {{wheelName}}" id="subjectinput" hidden/>
+            <div>
+                <label>Name</label>
+                <input placeholder="Name" name="name" id="nameinput"/>
+            </div>
+            <div>
+                <label>Email</label>
+                <input placeholder="Email" name="email" id="emailinput"/>
+            </div>
+            <div>
+                <label>Body</label>
+                <input placeholder="Body" name="body" id="bodyinput"/>
+            </div>
+            <button id="submitorder">Submit</button>
         </div>
     <div class="cs-right-section2">
         <div class="row">
@@ -79,4 +99,5 @@ eleventyComputed:
         </div>
     </div>
     </div>
+    <div id="page-mask"></div>
 </section>
