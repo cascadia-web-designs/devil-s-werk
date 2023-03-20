@@ -10,7 +10,8 @@ eleventyNavigation:
     key: Contact
     order: 5
 ---
-
+<script defer src="../assets/js/contact.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <section id="int-hero">
   <h1 id="home-h">Contact Us</h1>
   {% image './src/images/lowshot.png', 'cabinets', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
@@ -22,7 +23,7 @@ eleventyNavigation:
 
 <section id="cs-contact">
   <div class="cs-container">
-    <form id="cs-form" name="Contact Form" method="post">
+    <div id="cs-form" name="Contact Form" method="post">
       <div class="cs-content">
         <span class="cs-topper">Contact</span>
         <h2 class="cs-title">Get in Touch</h2>
@@ -47,8 +48,8 @@ eleventyNavigation:
                 Message
                 <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
       </label>
-      <button class="cs-button-solid" type="submit">Submit Message</button>
-    </form>
+      <button class="cs-button-solid" id="submitcontact">Submit Message</button>
+    </div>
     <div class="cs-right-section">
       <!--Email-->
       <h2>Email</h2>
