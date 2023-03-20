@@ -64,22 +64,24 @@ eleventyComputed:
         </div>
         </form>
         <div id="orderform" class="gone">
-            <button id="xbutton">X</button>
-            <h2>Ordering {{wheelName}}</h2>
-            <input placeholder="Subject" value="Ordering - {{wheelName}}" id="subjectinput" hidden/>
-            <div>
-                <label>Name</label>
-                <input placeholder="Name" name="name" id="nameinput"/>
+            <div class="modal">
+                <button id="xbutton" class="exit-button">X</button>
+                <h2>Ordering {{wheelName}}</h2>
+                <input placeholder="Subject" value="Ordering - {{wheelName}}" id="subjectinput" hidden/>
+                <div class="input-box">
+                    <label>Name</label>
+                    <input placeholder="Name" name="name" id="nameinput"/>
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input placeholder="Email" name="email" id="emailinput"/>
+                </div>
+                <div>
+                    <label>Body</label>
+                    <textarea placeholder="Body" name="body" id="bodyinput"></textarea>
+                </div>
+                <button id="submitorder">Submit</button>
             </div>
-            <div>
-                <label>Email</label>
-                <input placeholder="Email" name="email" id="emailinput"/>
-            </div>
-            <div>
-                <label>Body</label>
-                <input placeholder="Body" name="body" id="bodyinput"/>
-            </div>
-            <button id="submitorder">Submit</button>
         </div>
     <div class="cs-right-section2">
         <img src="{{ image }}" alt="{{ imageAlt }}"  decoding="async"/>
