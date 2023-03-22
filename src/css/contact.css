@@ -209,6 +209,9 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
+    align-items: center;
+    padding-top: 0rem;
+    padding-top: 1rem;
   }
   #cs-contact .row {
     display: flex;
@@ -371,6 +374,9 @@
   }
   #cs-contact .cs-right-section {
 
+  }
+  #cs-contact .cs-right-section2 {
+    padding-top: 0rem;
   }
 }
 /* Dark Mode */
