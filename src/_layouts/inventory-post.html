@@ -65,7 +65,13 @@ eleventyComputed:
         </form>
         <div id="orderform" class="gone">
             <div class="modal">
-                <button id="xbutton" class="exit-button">X</button>
+                <button id="xbutton" class="exit-button">
+                    <svg aria-hidden="true" class="pswp__icn" viewBox="0 0 32 32" width="32" height="32">
+                        <use class="pswp__icn-shadow" xlink:href="#pswp__icn-close">
+                        </use>
+                        <path d="M24 10l-2-2-6 6-6-6-2 2 6 6-6 6 2 2 6-6 6 6 2-2-6-6z" id="pswp__icn-close"></path>
+                    </svg>
+                </button>
                 <h2>Ordering {{wheelName}}</h2>
                 <input placeholder="Subject" value="Ordering - {{wheelName}}" id="subjectinput" hidden/>
                 <div class="input-box">
