@@ -34,6 +34,10 @@
   gap: 16px;
 }
 
+.modal h2 {
+  color: #000 !important;
+}
+
 .exit-button {
   position: absolute;
   top: -6px;
