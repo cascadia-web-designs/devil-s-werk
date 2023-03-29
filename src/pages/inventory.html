@@ -75,7 +75,7 @@ eleventyNavigation:
 <div class="blog-container main-content-wrapper">
     <div class="inventory-product">
         <p class="">FILTERS</p>
-        <select onclick="filterSelection(value)">
+        <select onclick="categoryUpdate(value)">
             <option value="">All Sizes</option>
             <option value="17in">17″</option>
             <option value="18in">18″</option>
@@ -84,11 +84,11 @@ eleventyNavigation:
             <option value="Accessories">Accessories</option>
         </select>
         <p class="">SORT BY</p>
-        <select>
+        <select onclick="sortHandler(value)">
             <option value="">Recent</option>
-            <option value="option1">Oldest to New</option>
-            <option value="option2">Highest to Lowest</option>
-            <option value="option3">Lowest to Highest</option>
+            <option value="OTN">Oldest to New</option>
+            <option value="HTL">Highest to Lowest</option>
+            <option value="LTH">Lowest to Highest</option>
         </select>
         <div class="search-text">SEARCH</div>
         <div class="search-div">
@@ -100,16 +100,16 @@ eleventyNavigation:
             width="25"
             class="padding-inventory"
             />
-            <form name="search" method="post">
+            <div name="search">
                 <label>
-                    <input class="search-field" onkeyup="filterSelectionSearch(value)" type="text" id="name" name="name" placeholder="Search">
+                    <input class="search-field" onkeyup="searchUpdate(value)" type="text" id="name" name="name" placeholder="Search">
                 </label>
-            </form>
+            </div>
         </div>
     </div>
     <hr style="color: black; height: 1px; width: 90%;">
     <!--Main content -->
-    <div class="main-content">
+    <div class="main-content" id="gridParent">
         {% if collections.post | length == 0 %}
             <h1>No Recent Posts</h1>
         {% endif %}
@@ -146,15 +146,31 @@ eleventyNavigation:
         {%- endfor -%}
     </div>
     <script>
-        filterSelection("all")
-        function filterSelection(c) {
+        let category = "";
+        let search = "";
 
+        filterSelection()
+
+        function categoryUpdate(value) {
+            category = value
+            filterSelection()
+        }
+
+        function searchUpdate(query) {
+            search = query
+            filterSelection()
+        }
+
+        function filterSelection() {
             var x, i;
             x = document.getElementsByClassName("filter-div");
-            if (c == "all") c = "";
-        for (i = 0; i < x.length; i++) {
-            RemoveClass(x[i], "show");
-            if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+            for (i = 0; i < x.length; i++) {
+                RemoveClass(x[i], "show");
+                var targetClass = x[i].className.toLowerCase()
+                var lowerSearch = search.toLowerCase()
+                if (targetClass.indexOf(category) > -1 && targetClass.indexOf(lowerSearch) > -1) {
+                    AddClass(x[i], "show")
+                };
             }
         }
         
@@ -163,7 +179,9 @@ eleventyNavigation:
             arr1 = element.className.split(" ");
             arr2 = name.split(" ");
             for (i = 0; i < arr2.length; i++) {
-            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
             }
         }
         
@@ -172,47 +190,53 @@ eleventyNavigation:
             arr1 = element.className.split(" ");
             arr2 = name.split(" ");
             for (i = 0; i < arr2.length; i++) {
-            while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);     
-            }
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
             }
             element.className = arr1.join(" ");
         }
+
+        function sortByLowHigh() {
+            var parent = document.getElementById('gridParent');
+            var posts = Array.from(parent.children);
+            parent.innerHTML = "";
+            var sortedPosts = posts.sort(
+                (first, second) => {
+                    let firstPrice = first.className.split(" ")[2];
+                    let secondPrice = second.className.split(" ")[2];
+                    return parseInt(firstPrice) - parseInt(secondPrice);
+                }
+            )
+            sortedPosts.forEach((post) => parent.appendChild(post));
+        }
+
+        function sortByHighLow() {
+            var parent = document.getElementById('gridParent');
+            var posts = Array.from(parent.children); 
+            parent.innerHTML = ""; // empty parent HTML elements.
+            var sortedPosts = posts.sort(
+                (first, second) => {
+                    let firstPrice = first.className.split(" ")[2];
+                    let secondPrice = second.className.split(" ")[2];
+                    return parseInt(secondPrice) - parseInt(firstPrice);
+                }
+            )
+            sortedPosts.forEach((post) => parent.appendChild(post));
+        }
+
+        function sortHandler(c) {
+            if (c == "LTH") {
+                sortByLowHigh();
+            } else if (c == "HTL") {
+                sortByHighLow();
+            } else if (c == "OTN") {
+                console.log('implement later')
+            }
+        }
+        
+
     </script>
-        <script>
-            filterSelectionSearch("all")
-            function filterSelectionSearch(c) {
-    
-                var x, i;
-                x = document.getElementsByClassName("filter-div");
-                if (c == "all") c = "";
-            for (i = 0; i < x.length; i++) {
-                RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
-                }
-            }
-            
-            function AddClass(element, name) {
-                var i, arr1, arr2;
-                arr1 = element.className.split(" ");
-                arr2 = name.split(" ");
-                for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-                }
-            }
-            
-            function RemoveClass(element, name) {
-                var i, arr1, arr2;
-                arr1 = element.className.split(" ");
-                arr2 = name.split(" ");
-                for (i = 0; i < arr2.length; i++) {
-                while (arr1.indexOf(arr2[i]) > -1) {
-                arr1.splice(arr1.indexOf(arr2[i]), 1);     
-                }
-                }
-                element.className = arr1.join(" ");
-            }
-        </script>
         <script src="../assets/js/swiper.js">
         </script>
 </div>
