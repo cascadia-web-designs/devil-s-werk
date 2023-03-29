@@ -52,41 +52,7 @@ eleventyComputed:
 </script>
 
 <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css">
-<div class="pswp-gallery" id="my-gallery">
-    <a
-      href="/images/blog/cleantires_waifu2x_photo_noise3_scale.png"
-      data-pswp-width="1875"
-      data-pswp-height="2500"
-      target="_blank"
-    >
-      <img
-        src="{{ extraImage1 }}"
-        alt=""
-      />
-    </a>
-    <a
-      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
-      data-pswp-width="1669"
-      data-pswp-height="2500"
-      target="_blank"
-    >
-      <img
-        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
-        alt=""
-      />
-    </a>
-    <a
-      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
-      data-pswp-width="2500"
-      data-pswp-height="1666"
-      target="_blank"
-    >
-      <img
-        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"
-        alt=""
-      />
-    </a>
-  </div>
+
 <section id="int-hero">
     <h1 id="home-h">{{ wheelName }}</h1>
     {% image './src/images/lowshot.png', 'cabinets', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
@@ -141,20 +107,112 @@ eleventyComputed:
             </div>
         </div>
     <div class="cs-right-section2">
-        <div class="row">
-            <img src="{{ extraImage1 }}" alt="{{ imageAlt }}"  decoding="async"/>
-            <img src="{{ extraImage2 }}" alt="{{ imageAlt }}"  decoding="async"/>
-            <img src="{{ extraImage3 }}" alt="{{ imageAlt }}"  decoding="async"/>
-        </div> 
-        <div class="row">
-            <img src="{{ extraImage4 }}" alt="{{ imageAlt }}"  decoding="async"/>
-            <img src="{{ extraImage5 }}" alt="{{ imageAlt }}"  decoding="async"/>
-            <img src="{{ extraImage6 }}" alt="{{ imageAlt }}"  decoding="async"/>
-        </div>
-        <div class="row">
-            <img src="{{ extraImage7 }}" alt="{{ imageAlt }}"  decoding="async"/>
-            <img src="{{ extraImage8 }}" alt="{{ imageAlt }}"  decoding="async"/>
-            <img src="{{ extraImage9 }}" alt="{{ imageAlt }}"  decoding="async"/>
+        <div class="pswp-gallery" id="my-gallery">
+            <div class="row">
+                <a
+                href="{{ extraImage1 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage1 }}"
+                    alt=""
+                    />
+                </a>
+                <a
+                href="{{ extraImage2 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage2 }}"
+                    alt=""
+                    />
+                </a>
+                <a
+                href="{{ extraImage3 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage3 }}"
+                    alt=""
+                    />
+                </a>
+            </div> 
+            <div class="row">
+                <a
+                href="{{ extraImage4 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage4 }}"
+                    alt=""
+                    />
+                </a>
+                <a
+                href="{{ extraImage5 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage5 }}"
+                    alt=""
+                    />
+                </a>
+                <a
+                href="{{ extraImage6 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage6 }}"
+                    alt=""
+                    />
+                </a>
+            </div> 
+            <div class="row">
+                <a
+                href="{{ extraImage7 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage7 }}"
+                    alt=""
+                    />
+                </a>
+                <a
+                href="{{ extraImage8 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage8 }}"
+                    alt=""
+                    />
+                </a>
+                <a
+                href="{{ extraImage9 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage9 }}"
+                    alt=""
+                    />
+                </a>
+            </div> 
         </div>
     </div>
     </div>
