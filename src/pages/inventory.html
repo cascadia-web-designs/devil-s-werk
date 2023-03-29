@@ -36,7 +36,7 @@ eleventyNavigation:
         </select>
         <p class="">SORT BY</p>
         <select onclick="sortHandler(value)">
-            <option value="">Recent</option>
+            <option value="RECENT">Recent</option>
             <option value="OTN">Oldest to New</option>
             <option value="HTL">Highest to Lowest</option>
             <option value="LTH">Lowest to Highest</option>
@@ -99,6 +99,7 @@ eleventyNavigation:
     <script>
         let category = "";
         let search = "";
+        let storedRecentArray = Array.from(document.getElementById('gridParent').children);
 
         filterSelection()
 
@@ -176,13 +177,28 @@ eleventyNavigation:
             sortedPosts.forEach((post) => parent.appendChild(post));
         }
 
+        function sortByRecent() {
+            var parent = document.getElementById('gridParent');
+            parent.innerHTML = "";
+            storedRecentArray.forEach((post) => parent.appendChild(post));
+        }
+
+        function sortByOldToNew() {
+            var parent = document.getElementById('gridParent');
+            parent.innerHTML = "";
+            let reverseArr = storedRecentArray.reverse();
+            reverseArr.forEach((post) => parent.appendChild(post));
+        }
+
         function sortHandler(c) {
             if (c == "LTH") {
                 sortByLowHigh();
             } else if (c == "HTL") {
                 sortByHighLow();
             } else if (c == "OTN") {
-                console.log('implement later')
+                sortByOldToNew();
+            } else if (c == "RECENT") {
+                sortByRecent();
             }
         }
         
