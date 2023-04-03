@@ -889,6 +889,7 @@ a {
 select {
   padding: 10px 30px 10px 10px;
   font-size: 16px;
+  border-color: #767676;
   border-radius: 4px;
   background-color: #fff;
   color: #333;
