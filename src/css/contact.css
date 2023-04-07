@@ -472,7 +472,6 @@
     padding-top: 0rem;
     }
   }
-}
 /* Dark Mode */
 @media only screen and (min-width: 0em) {
   body.dark-mode #cs-contact .cs-text,
