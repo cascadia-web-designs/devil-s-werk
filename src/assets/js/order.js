@@ -44,9 +44,9 @@ const setEvents = (Order) => {
     const orderButton = document.getElementById("order");
     const submitButton = document.getElementById("submitorder");
     const xButton = document.getElementById("xbutton");
-    const cancelButton = document.getElementById("cancel-button");
+    // const cancelButton = document.getElementById("cancel-button");
 
-    cancelButton.addEventListener('click', Order.showModal);
+    // cancelButton.addEventListener('click', Order.showModal);
     xButton.addEventListener('click', Order.showModal);
     orderButton.addEventListener('click', Order.showModal);
     submitButton.addEventListener('click', Order.sendEmail);

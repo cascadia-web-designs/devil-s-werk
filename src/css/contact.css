@@ -12,19 +12,36 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  left: 20%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  top: 0%;
+  /* left: 20%;
   right: 20%;
-  bottom: 20%;
-  top: 15%;
+  bottom: 5%;
+  top: 5%; */
   background-color: white;
   border: solid 2px gray;
   border-radius: 15px;
-  min-height: 32rem;
+  min-height: 40rem;
   padding-top: 125px;
   padding-bottom: 125px;
   padding-left: clamp(25px, 5vw, 100px);
   padding-right: clamp(25px, 5vw, 100px);
   z-index: 200002;
+}
+
+.input-box {
+  width: 100%;
+}
+.input-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#submitorder.cs-button-solid {
+  width: 100%;
 }
 
 .modal {
@@ -75,38 +92,6 @@
   align-self: end;
   display: flex;
   gap: 16px;
-}
-
-.cancel-button {
-  width: 125px;
-  height: 38px;
-  background-color: #fff;
-  color: #000;
-  border: 0;
-  font-weight: 600;
-  border-radius: 5px;
-  transition: background-color 300ms ease-in-out;
-}
-
-.cancel-button:hover {
-  background-color: #faf4f4;
-  transition: background-color 300ms ease-in-out;
-}
-
-.submit-button {
-  width: 125px;
-  height: 38px;
-  background-color: #000;
-  color: #fff;
-  border: 0;
-  font-weight: 600;
-  border-radius: 5px;
-  transition: background-color 200ms ease-in-out;
-}
-
-.submit-button:hover {
-  background-color: #c40e32;
-  transition: background-color 200ms ease-in-out;
 }
 
 /* Mobile - 360px */
@@ -185,13 +170,17 @@
   #cs-contact #cs-form {
     margin-bottom: 2.5rem;
   }
-  #cs-contact #cs-form label {
+
+  #cs-contact #cs-form label, #orderform label {
     font-size: 1rem;
     line-height: 1.5em;
     font-weight: 700;
     /* 12px - 20px */
-    margin-bottom: clamp(0.75rem, 1.3em, 1.25rem);
     color: var(--headerColor);
+  }
+  #cs-contact #cs-form label {
+    /* 12px - 20px */
+    margin-bottom: clamp(0.75rem, 1.3em, 1.25rem);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -381,9 +370,19 @@
     /* Makes img tag act as a background image */
     object-fit: cover;
   }
+
+  .input-boxes {
+    flex-direction: column;
+  }
 }
 /* Tablet - 700px */
 @media only screen and (min-width: 43.75em) {
+  .show {
+    left: 15%;
+    right: 15%;
+    bottom: 10%;
+    top: 10%;
+  }
   #cs-contact .cs-right-section img {
     width: 500px;
   }
@@ -406,6 +405,13 @@
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64em) {
+
+  .show {
+    left: 20%;
+    right: 20%;
+    bottom: 5%;
+    top: 5%;
+  }
   #cs-contact .cs-container {
     max-width: 80rem;
     display: flex;
@@ -459,8 +465,12 @@
   #cs-contact .cs-right-section {
 
   }
+  .input-boxes {
+    flex-direction: row;
+    }
   #cs-contact .cs-right-section2 {
     padding-top: 0rem;
+    }
   }
 }
 /* Dark Mode */
