@@ -39,6 +39,19 @@ eleventyComputed:
         </article>
     </div>
 </div> -->
+<script type="module">
+    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
+    console.log('swag');
+    const lightbox = new PhotoSwipeLightbox({
+    gallery: '#my-gallery',
+    children: 'a',
+    pswpModule: () => import('https://unpkg.com/photoswipe'),
+    });
+
+    lightbox.init();
+</script>
+
+<link rel="stylesheet" href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css">
 
 <section id="int-hero">
     <h1 id="home-h">{{ wheelName }}</h1>
@@ -53,6 +66,7 @@ eleventyComputed:
         <div class="cs-content">
             <span class="cs-topper">Product Info</span>
             <h2 class="cs-title2">{{ wheelName }}</h2>
+            <h2 class="cs-title2">Wheel Size: {{ wheelSize }}</h2>
             <h2 class="cs-title2">Condition: {{ condition }}</h2>
             <h2 class="cs-title2">Brand/Model: {{ brandModel }}</h2>
             <h2 class="cs-title2">Bolt Pattern: {{ boltPattern }}</h2>
@@ -103,8 +117,113 @@ eleventyComputed:
             </div>
         </div>
     <div class="cs-right-section2">
-        <img src="{{ image }}" alt="{{ imageAlt }}"  decoding="async"/>
-        <a class="cs-link cs-padding" href="mailto:info@devilswerk.com">info@devilswerk.com</a>
+        <div class="pswp-gallery" id="my-gallery">
+            <div class="row">
+                <a
+                href="{{ extraImage1 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage1 }}"
+                    alt=""
+                    />
+                </a>
+                <a
+                href="{{ extraImage2 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage2 }}"
+                    alt=""
+                    />
+                </a>
+                <a
+                href="{{ extraImage3 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage3 }}"
+                    alt=""
+                    />
+                </a>
+            </div> 
+            <div class="row">
+                <a
+                href="{{ extraImage4 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage4 }}"
+                    alt=""
+                    />
+                </a>
+                <a
+                href="{{ extraImage5 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage5 }}"
+                    alt=""
+                    />
+                </a>
+                <a
+                href="{{ extraImage6 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage6 }}"
+                    alt=""
+                    />
+                </a>
+            </div> 
+            <div class="row">
+                <a
+                href="{{ extraImage7 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage7 }}"
+                    alt=""
+                    />
+                </a>
+                <a
+                href="{{ extraImage8 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage8 }}"
+                    alt=""
+                    />
+                </a>
+                <a
+                href="{{ extraImage9 }}"
+                data-pswp-width="2072"
+                data-pswp-height="1380"
+                target="_blank"
+                >
+                    <img
+                    src="{{ extraImage9 }}"
+                    alt=""
+                    />
+                </a>
+            </div> 
+        </div>
     </div>
     </div>
     <div id="page-mask"></div>

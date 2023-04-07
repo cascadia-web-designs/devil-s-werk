@@ -16,74 +16,56 @@ eleventyNavigation:
 <!--                    LANDING                   -->
 <!-- ============================================ -->
 
-<script type="module">
-    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
-    console.log('swag');
-    const lightbox = new PhotoSwipeLightbox({
-    gallery: '#my-gallery',
-    children: 'a',
-    pswpModule: () => import('https://unpkg.com/photoswipe'),
-    });
-
-    lightbox.init();
-</script>
-
-<link rel="stylesheet" href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css">
-
 <section id="int-hero">
     <h1 id="home-h">Inventory</h1>
     {% image './src/images/lowshot.png', 'close up of wheel', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
 </section>
-<div class="pswp-gallery" id="my-gallery">
-    <a
-      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"
-      data-pswp-width="1875"
-      data-pswp-height="2500"
-      target="_blank"
-    >
-      <img
-        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"
-        alt=""
-      />
-    </a>
-    <a
-      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
-      data-pswp-width="1669"
-      data-pswp-height="2500"
-      target="_blank"
-    >
-      <img
-        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
-        alt=""
-      />
-    </a>
-    <a
-      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
-      data-pswp-width="2500"
-      data-pswp-height="1666"
-      target="_blank"
-    >
-      <img
-        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"
-        alt=""
-      />
-    </a>
-  </div>
 <!-- ============================================ -->
 <!--              Main Blog Content               -->
 <!-- ============================================ -->
-
 <div class="blog-container main-content-wrapper">
+    <div class="inventory-product">
+        <p class="">FILTERS</p>
+        <select onclick="categoryUpdate(value)">
+            <option value="">All Sizes</option>
+            <option value="17in">17″</option>
+            <option value="18in">18″</option>
+            <option value="19in">19″</option>
+            <option value="20in">20″</option>
+            <option value="Accessories">Accessories</option>
+        </select>
+        <p class="">SORT BY</p>
+        <select onclick="sortHandler(value)">
+            <option value="RECENT">Recent</option>
+            <option value="OTN">Oldest to New</option>
+            <option value="HTL">Highest to Lowest</option>
+            <option value="LTH">Lowest to Highest</option>
+        </select>
+        <p class="search-text">SEARCH</p>
+        <div class="search-div">
+            <img
+            aria-hidden="true"
+            decoding="async"
+            src="/assets/svgs/search.svg"
+            alt="icon"
+            width="25"
+            class="padding-inventory"
+            />
+            <div name="search">
+                <label>
+                    <input class="search-field" onkeyup="searchUpdate(value)" type="text" id="name" name="name" placeholder="Search">
+                </label>
+            </div>
+        </div>
+    </div>
+    <hr style="color: black; height: 1px; width: 90%;">
     <!--Main content -->
-    <div class="main-content">
-        <!-- ============================================ -->
-        <!--                 Blog Articles                -->
-        <!-- ============================================ -->
-
+    <div class="main-content" id="gridParent">
         {% if collections.post | length == 0 %}
             <h1>No Recent Posts</h1>
         {% endif %}
         {%- for post in collections.post | reverse -%}
+        <div class="filter-div {{ post.data.wheelName }} {{ post.data.wheelPrice }} {{ post.data.wheelSize }} {{ post.data.condition }} {{ post.data.brandModel }} {{ post.data.boltPattern }} {{ post.data.front }} {{ post.data.rear }} {{ post.data.colorFace }}">
             <a href="{{ post.url }}">
                 <article class="recent-articles">
                     <!--Main Article Image-->
@@ -111,11 +93,117 @@ eleventyNavigation:
                     </div>
                 </article>
             </a>
+        </div>
         {%- endfor -%}
     </div>
+    <script>
+        let category = "";
+        let search = "";
+        let storedRecentArray = Array.from(document.getElementById('gridParent').children);
 
-    <!-- ============================================ -->
-    <!--                Featured Posts                -->
-    <!-- ============================================ -->
+        filterSelection()
 
+        function categoryUpdate(value) {
+            category = value
+            filterSelection()
+        }
+
+        function searchUpdate(query) {
+            search = query
+            filterSelection()
+        }
+
+        function filterSelection() {
+            var x, i;
+            x = document.getElementsByClassName("filter-div");
+            for (i = 0; i < x.length; i++) {
+                RemoveClass(x[i], "show");
+                var targetClass = x[i].className.toLowerCase()
+                var lowerSearch = search.toLowerCase()
+                if (targetClass.indexOf(category) > -1 && targetClass.indexOf(lowerSearch) > -1) {
+                    AddClass(x[i], "show")
+                };
+            }
+        }
+        
+        function AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+        
+        function RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        function sortByLowHigh() {
+            var parent = document.getElementById('gridParent');
+            var posts = Array.from(parent.children);
+            parent.innerHTML = "";
+            var sortedPosts = posts.sort(
+                (first, second) => {
+                    let firstPrice = first.className.split(" ")[2];
+                    let secondPrice = second.className.split(" ")[2];
+                    return parseInt(firstPrice) - parseInt(secondPrice);
+                }
+            )
+            sortedPosts.forEach((post) => parent.appendChild(post));
+        }
+
+        function sortByHighLow() {
+            var parent = document.getElementById('gridParent');
+            var posts = Array.from(parent.children); 
+            parent.innerHTML = ""; // empty parent HTML elements.
+            var sortedPosts = posts.sort(
+                (first, second) => {
+                    let firstPrice = first.className.split(" ")[2];
+                    let secondPrice = second.className.split(" ")[2];
+                    return parseInt(secondPrice) - parseInt(firstPrice);
+                }
+            )
+            sortedPosts.forEach((post) => parent.appendChild(post));
+        }
+
+        function sortByRecent() {
+            var parent = document.getElementById('gridParent');
+            parent.innerHTML = "";
+            storedRecentArray.forEach((post) => parent.appendChild(post));
+        }
+
+        function sortByOldToNew() {
+            var parent = document.getElementById('gridParent');
+            parent.innerHTML = "";
+            let reverseArr = storedRecentArray.reverse();
+            reverseArr.forEach((post) => parent.appendChild(post));
+        }
+
+        function sortHandler(c) {
+            if (c == "LTH") {
+                sortByLowHigh();
+            } else if (c == "HTL") {
+                sortByHighLow();
+            } else if (c == "OTN") {
+                sortByOldToNew();
+            } else if (c == "RECENT") {
+                sortByRecent();
+            }
+        }
+        
+
+    </script>
+        <script src="../assets/js/swiper.js">
+        </script>
 </div>

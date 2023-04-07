@@ -269,7 +269,7 @@ a{
     margin: auto;
     margin-top: -13.4375em;
     position: relative;
-    z-index: 100;
+    z-index: 1;
     background: #fff;
     width: 90%;
     max-width: 90em;

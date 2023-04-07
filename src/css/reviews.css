@@ -79,7 +79,6 @@ a {
 
   #reviews .review p {
     line-height: 1.33333333;
-    margin-bottom: 1.75rem;
     text-align: left;
   }
 
@@ -102,6 +101,8 @@ a {
   #reviews .review {
     margin: 0;
     margin-bottom: 5.5rem;
+    width: 560px;
+    height: 344.58px;
   }
 
   #reviews .review:last-of-type {

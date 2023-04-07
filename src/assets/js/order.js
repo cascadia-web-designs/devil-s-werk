@@ -1,4 +1,5 @@
-
+import * as dotenv from 'dotenv'
+dotenv.config()
 const Order = () => {
     const formDiv = document.getElementById("orderform");
     const pageMask = document.getElementById("page-mask");

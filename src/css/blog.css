@@ -18,6 +18,16 @@ a {
     box-sizing: border-box;
     font-size: 100%;
   }
+
+  .inventory-product {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1em;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
   .blog-container {
     /* width: 94%;
     max-width: 80em; */
@@ -116,6 +126,10 @@ a {
     width: 100%;
     object-fit: cover;
   }
+
+  .padding-inventory {
+    display: none;
+  }
 }
 /*-- -------------------------- -->
 <---   Interior Page Header     -->
@@ -180,6 +194,10 @@ a {
     display: block;
     width: 96%;
   }
+
+  .search-text {
+    display: block;
+  }
 }
 /* Tablet */
 @media only screen and (min-width: 48em) {
@@ -188,6 +206,25 @@ a {
   }
   #int-hero h1 {
     font-size: 4rem;
+  }
+
+  .inventory-product {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .padding-inventory {
+    display: block;
+    padding-top: 2px;
+    margin-right: 10px;
+  }
+
+  .search-text {
+    display: none;
   }
 }
 /* Small Desktop */
@@ -200,6 +237,11 @@ a {
     background-attachment: fixed;
     font-size: inherit;
   }
+
+  .inventory-product {
+    gap: 4rem;
+  }
+
 }
 /*-- -------------------------- -->
 <---        Main Content        -->
@@ -236,7 +278,7 @@ a {
 /* Tablet - 1024px */
 @media only screen and (min-width: 64em) {
   .main-content-wrapper {
-    padding: 10rem 5rem;
+    padding: 4rem 5rem;
     /* display: flex;
     flex-direction: column; */
     /* flex-direction: row;
@@ -843,4 +885,48 @@ a {
     bottom: auto;
     right: auto;
   }
+}
+select {
+  padding: 10px 30px 10px 10px;
+  font-size: 16px;
+  border-color: #767676;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 200px;
+  background-image: url("../assets/svgs/dropdown1.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+
+select:focus {
+  outline: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  select {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(255,255,255,0.2);
+  }
+
+
+}
+
+.search-field {
+  height: 40px;
+  padding-left: 10px;
+}
+
+.search-div {
+  display: flex;
+}
+.filter-div {
+  display: none;
+}
+.show {
+  display: block;
 }
