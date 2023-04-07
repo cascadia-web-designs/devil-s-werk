@@ -72,24 +72,34 @@ eleventyComputed:
                         <path d="M24 10l-2-2-6 6-6-6-2 2 6 6-6 6 2 2 6-6 6 6 2-2-6-6z" id="pswp__icn-close"></path>
                     </svg>
                 </button>
-                <h2>Ordering {{wheelName}}</h2>
-                <input placeholder="Subject" value="Ordering - {{wheelName}}" id="subjectinput" hidden/>
-                <div class="input-box">
-                    <label>Name</label>
-                    <input placeholder="Name" name="name" id="nameinput"/>
+                <span class="cs-topper">Contact</span>
+                <h2 class="cs-title">Ordering {{wheelName}}</h2>
+                <!-- <input placeholder="Subject" value="Ordering - {{wheelName}}" id="subjectinput" hidden/> -->
+                <div class="input-boxes">
+                    <div class="input-box">
+                        <label>Name</label>
+                        <input placeholder="Name" name="name" id="nameinput"/>
+                    </div>
+                    <div class="input-box">
+                        <label>Email</label>
+                        <input placeholder="Email" name="email" id="emailinput"/>
+                    </div>
                 </div>
-                <div>
-                    <label>Email</label>
-                    <input placeholder="Email" name="email" id="emailinput"/>
+                <div class="input-boxes">
+                    <div class="input-box">
+                        <label>Subject</label>
+                        <input placeholder="Subject" value="Ordering - {{wheelName}}" name="subject" id="subjectinput"/>
+                    </div>
                 </div>
                 <div>
                     <label>Body</label>
                     <textarea placeholder="Body" name="body" id="bodyinput"></textarea>
                 </div>
-                <div class="ordermodal-button">
+                <button id="submitorder" class="cs-button-solid">Submit Message</button>
+                <!-- <div class="ordermodal-button">
                     <button id= "cancel-button" class="cancel-button">Cancel</button>
                     <button id="submitorder" class="submit-button">Submit</button>
-                </div>
+                </div> -->
             </div>
         </div>
     <div class="cs-right-section2">
