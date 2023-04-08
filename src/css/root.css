@@ -4,7 +4,7 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   :root {
-    --primary: #db2347;
+    --primary: #ab1f23;
     --primaryShade: #ffd675;
     --primaryDark: #805d0d;
     --bodyTextColor: #4E4B66;
@@ -777,10 +777,9 @@
   #footer img {
     display: block;
     position: absolute;
-    left: -50px;
-    bottom: -40px;
-    max-width: 2000px;
-    height: 210px;
+    left: 13px;
+    bottom: 54px;
+
   }
 
   #footer .container {
@@ -878,7 +877,7 @@
   }
 }
 .text-red {
-  color: #db2347;
+  color: #ab1f23;
 }
 .werk-flex {
   display: flex;
