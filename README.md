@@ -2,7 +2,6 @@
 
 #### By Arthur, Justin, Ricky, Kyle
 
-#### _.net Fullstack application that uses SQL databases to register a imaginary Hair Salon with its own Stylists and Clientale._
 ## Technologies Used
 
 * HTML
