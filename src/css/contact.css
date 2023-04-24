@@ -378,10 +378,10 @@
 /* Tablet - 700px */
 @media only screen and (min-width: 43.75em) {
   .show {
-    left: 15%;
-    right: 15%;
-    bottom: 10%;
-    top: 10%;
+    left: 5%;
+    right: 5%;
+    bottom: 0%;
+    top: 0%;
   }
   #cs-contact .cs-right-section img {
     width: 500px;
@@ -409,8 +409,8 @@
   .show {
     left: 20%;
     right: 20%;
-    bottom: 5%;
-    top: 5%;
+    bottom: 0%;
+    top: 0%;
   }
   #cs-contact .cs-container {
     max-width: 80rem;
@@ -452,6 +452,12 @@
 }
 /* Small Desktop - 1300px */
 @media only screen and (min-width: 81.25em) {
+  .show {
+    left: 20%;
+    right: 20%;
+    bottom: 5%;
+    top: 5%;
+  }
   #cs-contact #cs-form {
     column-gap: 0rem;
   }
