@@ -2,7 +2,7 @@
 pageName: Work-Meister
 wheelName: Work Meister S1 3PC
 wheelPrice: 3360
-wheelSize: "18"
+wheelSize: 18in
 image: /images/blog/rwzzu4hh.jpg
 extraImage1: /images/blog/ld1klhnh.jpg
 extraImage2: /images/blog/ztxyoylh.jpg
