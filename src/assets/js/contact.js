@@ -12,9 +12,9 @@ const Contact = () => {
         ${bodyInput}`;
 
         Email.send({
-            SecureToken: "30e56138-0473-4603-938d-d21d560cf827",
-            To: 'kyruken@gmail.com',
-            From: "myfodderemail0@gmail.com",
+            SecureToken: "1c236d5b-9cd5-47ea-baff-f712d2b98393",
+            To: 'devilswerk@gmail.com',
+            From: "cwdevilswerk@gmail.com",
             Subject: subjectInput,
             Body: emailBody
         })
