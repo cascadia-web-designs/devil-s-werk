@@ -1,5 +1,5 @@
 ---
-pageName: Leon-Hardiritt-Orden-19
+pageName: Leon-Hardiritt-Orden-Chrome-19
 wheelName: Leon Hardiritt Orden
 wheelPrice: 3200
 wheelSize: 19in
