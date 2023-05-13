@@ -1,5 +1,5 @@
 ---
-pageName: Work-Meister-S1-3pc-Silver
+pageName: Work-Meister-S1-3pc-19-Silver
 wheelName: Work Meister S1 3PC
 wheelPrice: 3560
 wheelSize: 19in
