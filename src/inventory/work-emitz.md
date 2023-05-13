@@ -1,5 +1,5 @@
 ---
-pageName: Work-Emitz
+pageName: Work-Emitz-9.5-10.5-19
 wheelName: Work Emitz
 wheelPrice: 3360
 wheelSize: 19in
