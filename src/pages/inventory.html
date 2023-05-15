@@ -3,7 +3,7 @@ layout: 'base.html'
 description: "WELCOME TO DEVIL'S WERK. With 10 years of experience in modifying, repairing, and refinishing all sizes and types of wheels, we provide the highest quality wheels and services that customers trust and love. "
 metaTitle: "Inventory - Devil's Werk"
 tagTitle: 'JDM Wheels and Refinishing'
-preloadImg: '/images/landing-1920w.webp'
+preloadImg: ''
 preloadCSS: '/css/blog.css'
 permalink: 'inventory/'
 author: "Devil's Werk"
@@ -67,7 +67,7 @@ eleventyNavigation:
             <h1>No Recent Posts</h1>
         {% endif %}
         {%- for post in collections.post | reverse -%}
-        <div class="filter-div {{ post.data.wheelName }} {{ post.data.wheelPrice }} {{ post.data.wheelSize }} {{ post.data.condition }} {{ post.data.brandModel }} {{ post.data.boltPattern }} {{ post.data.front }} {{ post.data.rear }} {{ post.data.colorFace }}">
+        <div class="filter-div {{ post.data.wheelPrice }} {{ post.data.wheelName }} {{ post.data.wheelSize }} {{ post.data.condition }} {{ post.data.brandModel }} {{ post.data.boltPattern }} {{ post.data.front }} {{ post.data.rear }} {{ post.data.colorFace }}">
             <a href="{{ post.url }}">
                 <article class="recent-articles">
                     <!--Main Article Image-->
@@ -101,6 +101,7 @@ eleventyNavigation:
     <script>
         let category = "";
         let search = "";
+        let mostRecent = "";
         let storedRecentArray = Array.from(document.getElementById('gridParent').children);
 
         filterSelection()
@@ -157,8 +158,9 @@ eleventyNavigation:
             parent.innerHTML = "";
             var sortedPosts = posts.sort(
                 (first, second) => {
-                    let firstPrice = first.className.split(" ")[2];
-                    let secondPrice = second.className.split(" ")[2];
+                    let firstPrice = first.className.split(" ")[1];
+                    let secondPrice = second.className.split(" ")[1];
+                    console.log(firstPrice);
                     return parseInt(firstPrice) - parseInt(secondPrice);
                 }
             )
@@ -171,8 +173,8 @@ eleventyNavigation:
             parent.innerHTML = ""; // empty parent HTML elements.
             var sortedPosts = posts.sort(
                 (first, second) => {
-                    let firstPrice = first.className.split(" ")[2];
-                    let secondPrice = second.className.split(" ")[2];
+                    let firstPrice = first.className.split(" ")[1];
+                    let secondPrice = second.className.split(" ")[1];
                     return parseInt(secondPrice) - parseInt(firstPrice);
                 }
             )
@@ -188,24 +190,26 @@ eleventyNavigation:
         function sortByOldToNew() {
             var parent = document.getElementById('gridParent');
             parent.innerHTML = "";
+            console.log(storedRecentArray);
             let reverseArr = storedRecentArray.reverse();
+            console.log(reverseArr);
             reverseArr.forEach((post) => parent.appendChild(post));
         }
 
         function sortHandler(c) {
-            if (c == "LTH") {
+            if (c != "" || c != null) {
+                mostRecent = c;
+            }
+            if (mostRecent == "LTH") {
                 sortByLowHigh();
-            } else if (c == "HTL") {
+            } else if (mostRecent == "HTL") {
                 sortByHighLow();
-            } else if (c == "OTN") {
+            } else if (mostRecent == "OTN") {
                 sortByOldToNew();
-            } else if (c == "RECENT") {
+            } else if (mostRecent == "RECENT") {
                 sortByRecent();
             }
         }
-        
-
+    
     </script>
-        <script src="../assets/js/swiper.js">
-        </script>
 </div>
