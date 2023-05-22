@@ -1,5 +1,5 @@
 ---
-pageName: Volk-Racing-TE37XT-MSpec-Bronze
+pageName: Volk-Racing-TE37XT-MSpec-Bronze-17
 wheelName: Volk Racing TE37XT M-SPEC
 wheelPrice: 3550
 wheelSize: 17in
