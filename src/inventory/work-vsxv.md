@@ -1,5 +1,5 @@
 ---
-pageName: WORK-VSXV
+pageName: WORK-VSXV-18
 wheelName: Work VS-XV
 wheelPrice: 3400
 wheelSize: 18in
