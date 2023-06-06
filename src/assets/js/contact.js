@@ -13,7 +13,7 @@ const Contact = () => {
 
         Email.send({
             SecureToken: "1c236d5b-9cd5-47ea-baff-f712d2b98393",
-            To: 'devilswerk@gmail.com',
+            To: 'dwerk@googlegroups.com',
             From: "cwdevilswerk@gmail.com",
             Subject: subjectInput,
             Body: emailBody
