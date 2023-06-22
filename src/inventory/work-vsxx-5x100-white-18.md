@@ -1,6 +1,6 @@
 ---
 pageName: Work-VSXX-5x100-white-18
-wheelName: Work VS-XX
+wheelName: Work VS-XX 5x100
 wheelPrice: 3200
 wheelSize: 18in
 image: /images/blog/img_6620.jpg
