@@ -2,6 +2,8 @@ backend:
   name: github
   branch: main
   repo: cascadia-web-designs/devil-s-werk
+  base_url: https://devilswerk.com
+  auth_endpoint: /api/auth
 
 local_backend: true
 # change url to a link to the image you want to use, no file paths, must be a URL
