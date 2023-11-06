@@ -1,5 +1,5 @@
 ---
-pageName: Volk-Racing-TE37SL-PressedGraphite
+pageName: Volk-Racing-TE37SL-PressedGraphite-18
 wheelName: Volk TE37SL
 wheelPrice: 3360
 wheelSize: 18in
