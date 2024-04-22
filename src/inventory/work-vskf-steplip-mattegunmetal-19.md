@@ -1,7 +1,7 @@
 ---
 pageName: Work-VSKF-StepLip-MatteGunmetal-19
 wheelName: Work VS-KF
-wheelPrice: 3499
+wheelPrice: 3500
 wheelSize: 19in
 image: /images/blog/img_8127.jpg
 extraImage1: /images/blog/img_8127.jpg
