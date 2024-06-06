@@ -22,15 +22,17 @@ const Order = () => {
         const bodyInput = document.getElementById("bodyinput").value;
 
         let emailBody = `${nameInput} - ${emailInput} 
-        ${bodyInput}`;
+        ${bodyInput} + ${subjectInput}`;
 
-        Email.send({
-            SecureToken: "1c236d5b-9cd5-47ea-baff-f712d2b98393",
-            To: 'cwdevilswerk@gmail.com',
-            From: "cwdevilswerk@gmail.com",
-            Subject: subjectInput,
-            Body: emailBody
-        })
+        emailjs.send('service_6yciryj', 'template_x0uqs9o', {           
+          from_name: nameInput,
+          to_name: "Justin",
+          from_email: emailInput, 
+          to_email: "justinurf@gmail.com ",
+          message: emailBody
+        },
+        'pIjVKnKp1gozCh38Y',
+      )
             .then(function (message) {
                 alert("Mail has been sent successfully")
             });
