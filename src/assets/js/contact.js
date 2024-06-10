@@ -1,23 +1,25 @@
-//Sends email using contact form on contact.html
 
 const Contact = () => {
-    const sendEmail = () => {
+    const sendEmail = () => { 
+        
         const nameInput = document.getElementById("name").value;
         const emailInput = document.getElementById("email").value;
         const phoneInput = document.getElementById("phone").value;
         const subjectInput = document.getElementById("subject").value;
         const bodyInput = document.getElementById("message").value;
+        let emailBody = `${nameInput} + ${emailInput} + ${phoneInput} 
+        ${bodyInput} + ${subjectInput}`; 
+        
 
-        let emailBody = `${nameInput} - ${emailInput} - ${phoneInput} 
-        ${bodyInput}`;
-
-        Email.send({
-            SecureToken: "1c236d5b-9cd5-47ea-baff-f712d2b98393",
-            To: 'cwdevilswerk@gmail.com',
-            From: "cwdevilswerk@gmail.com",
-            Subject: subjectInput,
-            Body: emailBody
-        })
+        emailjs.send('service_6yciryj', 'template_x0uqs9o', {           
+          from_name: nameInput,
+          to_name: "Justin",
+          from_email: emailInput, 
+          to_email: "seekingurf@gmail.com",
+          message: emailBody
+        },
+        'pIjVKnKp1gozCh38Y',
+      )
             .then(function (message) {
                 alert("Mail has been sent successfully")
             });
