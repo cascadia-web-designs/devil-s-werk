@@ -28,7 +28,7 @@ const Order = () => {
           from_name: nameInput,
           to_name: "Justin",
           from_email: emailInput, 
-          to_email: "justinurf@gmail.com ",
+          to_email: "seekingurf@gmail.com ",
           message: emailBody
         },
         'pIjVKnKp1gozCh38Y',
