@@ -2,7 +2,7 @@
 pageName: Weds-Kranze-Magiss-19
 wheelName: Weds Kranze Magiss
 wheelPrice: 3000
-wheelSize: 18in
+wheelSize: 19in
 image: /images/blog/img_8461.jpg
 extraImage1: /images/blog/img_8461.jpg
 extraImage2: /images/blog/img_8462.jpg
