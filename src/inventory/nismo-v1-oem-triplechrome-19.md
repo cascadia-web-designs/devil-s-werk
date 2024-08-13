@@ -16,8 +16,8 @@ extraImage9: /images/blog/img_0857.jpg
 condition: New
 brandModel: Nismo V1
 boltPattern: 5x114.3
-front: 19x9.5
-rear: 19x10.5
+front: 19x10.5+23
+rear: 19x10.5+23
 colorFace: "Special Order! We can get them brand new with new Triple Chrome.
   Email us for further details! "
 ---
