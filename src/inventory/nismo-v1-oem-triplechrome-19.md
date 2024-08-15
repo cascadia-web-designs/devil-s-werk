@@ -1,7 +1,7 @@
 ---
 pageName: Nismo-V1-OEM-TripleChrome-19
 wheelName: Nismo V1
-wheelPrice: 3800
+wheelPrice: 3900
 wheelSize: 19in
 image: /images/blog/1.jpg
 extraImage1: /images/blog/1.jpg
