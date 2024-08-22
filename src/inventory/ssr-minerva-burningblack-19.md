@@ -1,6 +1,6 @@
 ---
 pageName: SSR-Minerva-BurningBlack-19
-wheelName: SSR Minvera
+wheelName: SSR Minerva
 wheelPrice: 3800
 wheelSize: 19in
 image: /images/blog/img_8586.jpg
