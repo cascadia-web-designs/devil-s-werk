@@ -1,7 +1,7 @@
 ---
 pageName: Weds-Kranze-Borphes-Silver-19
 wheelName: Weds Kranze Borphes
-wheelPrice: 2661
+wheelPrice: 2660
 wheelSize: 19in
 image: /images/blog/img_8890.jpg
 extraImage1: /images/blog/img_8891.jpg
