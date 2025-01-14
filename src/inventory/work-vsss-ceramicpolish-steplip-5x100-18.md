@@ -1,6 +1,6 @@
 ---
 pageName: WORK-VSSS-CeramicPolish-StepLip-5x100-18
-wheelName: WORK VS-SS
+wheelName: WORK VS-SS 5x100
 wheelPrice: 3200
 wheelSize: 18in
 image: /images/blog/img_9078.jpg
