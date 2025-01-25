@@ -10,7 +10,7 @@ extraImage3: /images/blog/img_6262.jpg
 extraImage4: /images/blog/img_6277.jpg
 extraImage5: /images/blog/img_6279.jpg
 extraImage6: /images/blog/img_6267.jpg
-extraImage7: /images/blog/1.jpg
+extraImage7: /images/blog/222.jpg
 extraImage8: /images/blog/img_6285.jpg
 extraImage9: /images/blog/img_6275.jpg
 condition: New
