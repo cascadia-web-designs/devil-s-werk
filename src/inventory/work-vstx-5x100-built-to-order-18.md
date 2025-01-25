@@ -1,6 +1,6 @@
 ---
 pageName: WORK-VSTX-5x100-Built-To-Order-18
-wheelName: Work VS-TX
+wheelName: Work VS-TX 5x100 Built To Order
 wheelPrice: 3400
 wheelSize: 18in
 image: /images/blog/img_6269.jpg
