@@ -1,6 +1,6 @@
 ---
 pageName: WORK-VSXX-CeramicPolish-5x100-18
-wheelName: Work VS-XX
+wheelName: Work VS-XX 5x100
 wheelPrice: 3300
 wheelSize: 18in
 image: /images/blog/img_9139.jpg
