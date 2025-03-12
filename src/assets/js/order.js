@@ -1,4 +1,3 @@
-
 const Order = () => {
     const formDiv = document.getElementById("orderform");
     const pageMask = document.getElementById("page-mask");
@@ -16,13 +15,26 @@ const Order = () => {
     }
 
     const sendEmail = () => {
-        const nameInput = document.getElementById("nameinput").value;
-        const emailInput = document.getElementById("emailinput").value;
-        const subjectInput = document.getElementById("subjectinput").value;
-        const bodyInput = document.getElementById("bodyinput").value;
+        const nameInputElem = document.getElementById("nameinput");
+        const emailInputElem = document.getElementById("emailinput");
+        const subjectInputElem = document.getElementById("subjectinput");
+        const bodyInputElem = document.getElementById("bodyinput");
+        const phoneInputElem = document.getElementById("phoneinput");
+        
+        const nameInput = nameInputElem.value;
+        const emailInput = emailInputElem.value;
+        const subjectInput = subjectInputElem.value;
+        const bodyInput = bodyInputElem.value;
+        const phoneInput = phoneInputElem.value;
+        
+        // Check if email or phone number is empty
+        if (!emailInput.trim() || !phoneInput.trim()) {
+            alert("Error: Please fill out both the email and phone number fields.");
+            return; // Stop the function execution if fields are missing
+        }
 
         let emailBody = `${nameInput} - ${emailInput} 
-        ${bodyInput} + ${subjectInput}`;
+        ${bodyInput} + ${subjectInput} + ${phoneInput}`;
 
         emailjs.send('service_6yciryj', 'template_x0uqs9o', {           
           from_name: nameInput,
@@ -34,7 +46,14 @@ const Order = () => {
         'pIjVKnKp1gozCh38Y',
       )
             .then(function (message) {
-                alert("Mail has been sent successfully")
+                alert("Mail has been sent successfully");
+                
+                // Clear the input fields after successful send
+                nameInputElem.value = "";
+                emailInputElem.value = "";
+                subjectInputElem.value = "";
+                bodyInputElem.value = "";
+                phoneInputElem.value = "";
             });
     }
 

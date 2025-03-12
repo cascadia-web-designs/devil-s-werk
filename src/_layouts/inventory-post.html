@@ -107,13 +107,19 @@ src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
                 </div>
                 <div class="input-boxes">
                     <div class="input-box">
+                        <label>Phone Number</label>
+                        <input placeholder="Enter your phone number" value="" name="Phone Number" id="phoneinput"/>
+                    </div>
+                </div>
+                <div class="input-boxes">
+                    <div class="input-box">
                         <label>Subject</label>
                         <input placeholder="Subject" value="Ordering - {{wheelName}}" name="subject" id="subjectinput"/>
                     </div>
                 </div>
                 <div>
-                    <label>Body</label>
-                    <textarea placeholder="Body" name="body" id="bodyinput"></textarea>
+                    <label>Notes</label>
+                    <textarea placeholder="" name="body" id="bodyinput"></textarea>
                 </div>
                 <button id="submitorder" class="cs-button-solid">Submit Message</button>
                 <!-- <div class="ordermodal-button">
