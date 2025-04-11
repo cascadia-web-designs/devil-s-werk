@@ -16,7 +16,7 @@ extraImage9: /images/blog/img_6275.jpg
 condition: New
 brandModel: Work VS-TX 5x100
 boltPattern: 5x100
-front: Built to order. Any specs and finish
-rear: Built to order. Any specs and finish
-colorFace: Any Finish
+front: Built to order. Any specs
+rear: Built to order. Any specs
+colorFace: "standard color or full polish. Triple Chrome is additional "
 ---
