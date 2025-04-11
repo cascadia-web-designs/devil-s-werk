@@ -16,7 +16,7 @@ extraImage9: /images/blog/img_2552.jpg
 condition: New
 brandModel: Work VS-KF OG
 boltPattern: 5x114.3
-front: 19'' Reverse Built To Order. Any Spec and finish
-rear: 19'' Reverse Built To Order. Any Spec and finish
-colorFace: Any Color
+front: 19'' Reverse Built To Order. Any Spec
+rear: "19'' Reverse Built To Order. Any Spec "
+colorFace: "standard color or full polish. Triple Chrome is additional "
 ---
