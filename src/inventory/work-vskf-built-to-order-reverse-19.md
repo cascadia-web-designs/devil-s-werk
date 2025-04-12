@@ -1,7 +1,7 @@
 ---
 pageName: Work-VSKF-OG-Built-To-Order-Reverse-19
 wheelName: Work VS-KF Built To Order 19''
-wheelPrice: 3800
+wheelPrice: 4000
 wheelSize: 19in
 image: /images/blog/set1.jpg
 extraImage1: /images/blog/set1.jpg
