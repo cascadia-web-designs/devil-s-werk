@@ -19,7 +19,7 @@ collections:
       - { label: 'Page-Name-with-dashes-only', name: 'pageName', widget: 'string' }
       - { label: 'Wheel Name', name: 'wheelName', widget: 'string' }
       - { label: 'Wheel Price', name: 'wheelPrice', widget: 'number' }
-      - { label: 'Wheel Size (17in, 18in, 19in, 20in or Accessories)', name: 'wheelSize', widget: 'string' }
+      - { label: 'Wheel Size (17in, 18in, 19in, 20in or Accessories (MUST BE NAMED ACCESSORIES FOR DIFFERENT LAYOUT ON WEBSITE))', name: 'wheelSize', widget: 'string' }
       - { label: 'Front Image', name: 'image', widget: 'image' }
       - { label: 'Extra Image1', name: 'extraImage1', widget: 'image' }
       - { label: 'Extra Image2', name: 'extraImage2', widget: 'image' }
@@ -33,6 +33,6 @@ collections:
       - { label: 'Condition', name: 'condition', widget: 'string' }
       - { label: 'Brand/Model', name: 'brandModel', widget: 'string' }
       - { label: 'Bolt Pattern', name: 'boltPattern', widget: 'string'}
-      - { label: 'Front', name: 'front', widget: 'string' }
+      - { label: 'Front(IF NAMED ACCESSORIES IN WHEEL, THIS FIELD WILL BE A DESCRIPTION FOR ACCESORIES)', name: 'front', widget: 'string' }
       - { label: 'Rear', name: 'rear', widget: 'string' }
       - { label: 'Color Face', name: 'colorFace', widget: 'string' }
