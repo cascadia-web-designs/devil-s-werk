@@ -67,7 +67,7 @@ src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
 <!-- ============================================ -->
 <section id="cs-contact">
     <div class="cs-container">
-        <div class="cs-content">
+        <div class="cs-content" id="product-info-container">
             <span class="cs-topper">Product Info</span>
             <h2 class="cs-title2">{{ wheelName }}</h2>
             <h2 class="cs-title2">Wheel Size: {{ wheelSize }}</h2>
@@ -240,3 +240,56 @@ src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
     </div>
     <div id="page-mask"></div>
 </section>
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById("product-info-container");
+
+    // Find the Wheel Size <h2> element
+    const h2s = container.querySelectorAll("h2.cs-title2");
+    let isAccessory = false;
+
+    for (const h2 of h2s) {
+      if (h2.textContent.toLowerCase().includes("wheel size:")) {
+        if (h2.textContent.toLowerCase().includes("accessories")) {
+          isAccessory = true;
+        }
+        break;
+      }
+    }
+
+    if (isAccessory) {
+      const button = container.querySelector("button");
+      
+      // Save reference to the button's sibling so we can insert above it
+      const marker = button;
+
+      // Clear existing content before the button
+      while (container.firstChild && container.firstChild !== marker) {
+        container.removeChild(container.firstChild);
+      }
+
+      // Build and insert simplified accessory info
+      const accessoryHTML = `
+        <span class="cs-topper">Product Info</span>
+        <h2 class="cs-title2">{{ wheelName }}</h2>
+        <h2 class="cs-title2">Condition: {{ condition }}</h2>
+        <h2 class="cs-title2">Brand/Model: {{ brandModel }}</h2>
+        <h2 class="cs-title2">Price: ${{ wheelPrice }}</h2>
+        <h2 class="cs-title2">Color Face: {{ colorFace }}</h2>
+        <h2 class="cs-title2">{{ front }}</h2>
+      `;
+
+      const tempDiv = document.createElement("div");
+      tempDiv.innerHTML = accessoryHTML;
+
+      // Insert each element above the button
+      while (tempDiv.firstChild) {
+        container.insertBefore(tempDiv.firstChild, marker);
+      }
+    }
+  });
+</script>
