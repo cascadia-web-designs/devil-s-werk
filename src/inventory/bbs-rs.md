@@ -1,5 +1,5 @@
 ---
-pageName: BBS-RS
+pageName: BBS-RS-18
 wheelName: BBS RS
 wheelPrice: 3500
 wheelSize: 18in
