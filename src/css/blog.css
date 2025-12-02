@@ -386,6 +386,8 @@ a {
   .condition {
     font-size: 14px;
     color: var(--bodyText);
+    background: linear-gradient(90deg, rgba(255, 229, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background-clip: text;
   }
   .recent-articles .blog-link {
     font-size: 1rem;
