@@ -1,6 +1,6 @@
 ---
 pageName: Work-VSKF-Sharp-5x100-18
-wheelName: Work VS-KF Sharp
+wheelName: Work VS-KF Sharp 5x100
 wheelPrice: 3100
 wheelSize: 18in
 image: /images/blog/img_0134.jpg
