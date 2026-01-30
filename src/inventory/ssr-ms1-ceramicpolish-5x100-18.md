@@ -1,6 +1,6 @@
 ---
 pageName: SSR-MS1-CeramicPolish-5x100-18
-wheelName: SSR MS1
+wheelName: SSR MS1 5x100
 wheelPrice: 3400
 wheelSize: 18in
 image: /images/blog/img_9910.jpg
