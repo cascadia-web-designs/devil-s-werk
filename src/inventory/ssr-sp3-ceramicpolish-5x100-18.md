@@ -1,6 +1,6 @@
 ---
 pageName: SSR-SP3-CeramicPolish-5x100-18
-wheelName: SSR SP3
+wheelName: SSR SP3 5x100
 wheelPrice: 3500
 wheelSize: 18in
 image: /images/blog/img_9789.jpg
