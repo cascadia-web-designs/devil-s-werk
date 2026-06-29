@@ -1,6 +1,6 @@
 ---
 pageName: Work-VSXX-5x100-BurningBlack-18
-wheelName: Work VS-XX
+wheelName: Work VS-XX 5x100
 wheelPrice: 3200
 wheelSize: 18in
 image: /images/blog/img_0684.jpg
