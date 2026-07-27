@@ -1,6 +1,6 @@
 ---
 pageName: Work-Meister-S1-3pc-White-5x100-18
-wheelName: Work Meister S1
+wheelName: Work Meister S1 5x100
 wheelPrice: 3400
 wheelSize: 18in
 image: /images/blog/img_0655-1.jpg
