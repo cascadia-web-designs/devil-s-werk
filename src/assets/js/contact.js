@@ -7,7 +7,7 @@ const Contact = () => {
         const subjectInput = document.getElementById("subject").value.trim();
         const bodyInput = document.getElementById("message").value.trim();
 
-        // Validate that required fields (email, phone, and message) are filled
+        // Validate that required fields (email, phone, and message) 
         if (!emailInput || !phoneInput || !bodyInput) {
             alert("Please fill in the email, phone, and message fields.");
             return; // Prevent sending email if required fields are missing
