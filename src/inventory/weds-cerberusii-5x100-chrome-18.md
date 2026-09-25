@@ -1,6 +1,6 @@
 ---
 pageName: Weds-Cerberusii-5x100-Chrome-18
-wheelName: Weds Cerberus II
+wheelName: Weds Cerberus II 5x100
 wheelPrice: 3000
 wheelSize: 18in
 image: /images/blog/img_1087.jpg
@@ -14,7 +14,7 @@ extraImage7: /images/blog/img_1095.jpg
 extraImage8: /images/blog/img_1096.jpg
 extraImage9: /images/blog/img_1104.jpg
 condition: Chrome Condition 8/10
-brandModel: Weds Cerberus ii 5x100
+brandModel: Weds Cerberus ii
 boltPattern: 5x100
 front: 18x9.5+20
 rear: 18x9.5+20
